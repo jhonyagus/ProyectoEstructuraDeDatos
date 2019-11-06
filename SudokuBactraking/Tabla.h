@@ -8,28 +8,25 @@
 #if !defined(__Class_Diagram_1_Tabla_h)
 #define __Class_Diagram_1_Tabla_h
 
-#include <Operaciones.h>
+#include "Operaciones.h"
 
 class Tabla : public Operaciones
 {
 public:
-   bool buscarLugar(int** tablero, int& fila, int& col);
-   boll comprobar(int** tablero, int fila, int col, int num);
-   void mostrar(int** tablero);
+   bool buscarLugar(int& fila, int& col);
+   bool comprobar(int fila, int col, int num);
+   void mostrarT();
    int** getTablero(void);
    void setTablero(int** newTablero);
    Tabla();
    ~Tabla();
-   bool Sudoku(int** tablero);
-   bool UtilizadoEnFila(int** tablero, int fila, int num);
-   bool UtilizadoEnColumna(int** tablero, int col, int num);
-   bool UtilizadoEnSudoku(int** tablero, int inicioFila, int inicioColumna, int num);
+   bool Sudoku();
+   bool UtilizadoEnFila(int fila, int num);
+   bool UtilizadoEnColumna(int col, int num);
+   bool UtilizadoEnSudoku(int inicioFila, int inicioColumna, int num);
 
 protected:
 private:
    int** tablero;
-
-
 };
-
 #endif

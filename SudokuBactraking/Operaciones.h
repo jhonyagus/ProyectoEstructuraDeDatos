@@ -11,10 +11,10 @@
 class Operaciones
 {
 public:
-   virtual bool Sudoku(int** tablero)=0;
-   virtual bool UtilizadoEnFila(int** tablero, int fila, int num)=0;
-   virtual bool UtilizadoEnColumna(int** tablero, int col, int num)=0;
-   virtual bool UtilizadoEnSudoku(int** tablero, int inicioFila, int inicioColumna, int num)=0;
+   virtual bool Sudoku()=0;
+   virtual bool UtilizadoEnFila(int fila, int num)=0;
+   virtual bool UtilizadoEnColumna(int col, int num)=0;
+   virtual bool UtilizadoEnSudoku(int inicioFila, int inicioColumna, int num)=0;
 
 protected:
 private:
