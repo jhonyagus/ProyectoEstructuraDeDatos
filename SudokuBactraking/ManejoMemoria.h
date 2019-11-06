@@ -4,6 +4,7 @@
 #include <conio.h>
 #include<time.h>
 #include <stdio.h>
+#include<fstream>
 using namespace std;
 
 int **reservar(int fila,int colum)
@@ -30,7 +31,6 @@ void agregar(int **matriz,int tam)
 }
 void mostrar(int**matriz,int fila,int columna)
 {
-
     for(int i=0;i<fila;i++)
     {
         for(int j=0;j<columna;j++)
