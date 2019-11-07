@@ -1,3 +1,9 @@
+/***********************************************************************
+ * Module:  Main.cpp
+ * Author:  RODRIGO
+ * Modified: miércoles, 6 de noviembre de 2019 01:54:07
+ * Purpose: Declaration of the class Operaciones
+ ***********************************************************************/
 #include <iostream>
 #include<stdlib.h>
 #include "Tabla.cpp"

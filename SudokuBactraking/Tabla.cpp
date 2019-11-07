@@ -8,7 +8,6 @@
 #include "Tabla.h"
 #include "ManejoMemoria.h"
 
-
 bool Tabla::buscarLugar(int& fila, int& col)
 {
     for (fila = 0; fila < 9; fila++)
@@ -25,6 +24,7 @@ bool Tabla::comprobar( int fila, int col, int num)
 void Tabla::mostrarT()
 {
     mostrar(tablero,9,9);
+    escribirArchivo(tablero,9);
 }
 
 

@@ -1,3 +1,9 @@
+/***********************************************************************
+ * Module: Manejo de memoria.h
+ * Author:  RODRIGO
+ * Modified: miércoles, 20 de octubre de 2019 01:54:07
+ * Purpose: Declaration of the class Operaciones
+ ***********************************************************************/
 #ifndef MANEJOMEMORIA_H_INCLUDED
 #define MANEJOMEMORIA_H_INCLUDED
 #include<iostream>
@@ -115,5 +121,31 @@ void llenarAleatorios(int ** m,int fila, int columna,int n)
         }
     }
     delete[]uni;
+}
+void escribirArchivo(int **guardar,int tam)
+{
+    ofstream archivo;
+    archivo.open("Proyecto.txt",ios::out | ios::app);
+    if(archivo.fail())
+    {
+        cout<<"No se pudo Abrir"<<endl;
+        exit(1);
+    }
+    else{
+        for(int i=0;i<tam;i++)
+        {
+            for(int j=0;j<tam;j++)
+            {
+                archivo<<*(*(guardar+i)+j)<<" \t";
+            }
+            archivo<<" \n";
+            archivo<<" \n";
+        }
+    }
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo.close();
 }
 #endif // MANEJOMEMORIA_H_INCLUDED
