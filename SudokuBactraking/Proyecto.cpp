@@ -41,10 +41,22 @@ int main()
     Tabla t = Tabla();
     if (t.Sudoku() == true)
     {
+        system("cls");
+        cout<<endl;
+        cout<<endl;
+        cout<<endl;
+        cout<<endl;
+        cout<<endl;
         cout<<endl;
         cout<<endl;
         t.mostrarT();
+        cout<<endl;
+        cout<<endl;
+        cout<<endl;
+        cout<<endl;
+        system("txt2pdf.exe Proyecto.csv SudokuBacktraking.pdf -oao -pfs60 -pps43 -ptc0 -width3000 -height2000");
         system("pause");
+        system("cls");
         goto main;
 
     }
@@ -53,7 +65,6 @@ int main()
         cout << "No solution exists";
     }
     t.~Tabla();
-     system("txt2pdf.exe Proyecto.csv SudokuBacktraking.pdf -oao -pfs60 -pps43 -ptc0 -width3000 -height2000");
     system("pause");
     }
     return 0;
