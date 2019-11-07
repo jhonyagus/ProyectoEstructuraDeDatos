@@ -1,3 +1,10 @@
+/***********************************************************************
+ * Module:  ingreso.h
+ * Author:  RODRIGO & JHONY
+ * Modified: miércoles, 6 de noviembre de 2019 01:54:07
+ * Purpose: Validar ingreso de enteros
+ ***********************************************************************/
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
