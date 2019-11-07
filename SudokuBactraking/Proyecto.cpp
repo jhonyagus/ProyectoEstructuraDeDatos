@@ -1,6 +1,6 @@
 /***********************************************************************
  * Module:  Main.cpp
- * Author:  RODRIGO
+ * Author:  Antoni Toapanta Jhonny Naranjo
  * Modified: miércoles, 6 de noviembre de 2019 01:54:07
  * Purpose: Declaration of the class Operaciones
  ***********************************************************************/
@@ -27,6 +27,7 @@ int main()
     else
         cout << "No solution exists";
     t.~Tabla();
+     system("txt2pdf.exe Proyecto.csv SudokuBacktraking.pdf -oao -pfs60 -pps43 -ptc0 -width3000 -height2000");
     system("pause");
     }
     return 0;

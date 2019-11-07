@@ -125,7 +125,7 @@ void llenarAleatorios(int ** m,int fila, int columna,int n)
 void escribirArchivo(int **guardar,int tam)
 {
     ofstream archivo;
-    archivo.open("Proyecto.txt",ios::out | ios::app);
+    archivo.open("Proyecto.csv",ios::out | ios::app);
     if(archivo.fail())
     {
         cout<<"No se pudo Abrir"<<endl;
