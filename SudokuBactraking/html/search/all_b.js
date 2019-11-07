@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tabla_19',['Tabla',['../class_tabla.html',1,'Tabla'],['../class_tabla.html#aa06ea30404464606d6f3b71c66a78809',1,'Tabla::Tabla()']]],
-  ['tabla_2ecpp_20',['Tabla.cpp',['../_tabla_8cpp.html',1,'']]],
-  ['tabla_2eh_21',['Tabla.h',['../_tabla_8h.html',1,'']]]
+  ['settablero_22',['setTablero',['../class_tabla.html#a2bde4b3a101add916a62275579090b1e',1,'Tabla']]],
+  ['sudoku_23',['Sudoku',['../class_operaciones.html#a5e32792f8a986c410b67c3778eb4c716',1,'Operaciones::Sudoku()'],['../class_tabla.html#abb9316bb27599050c2d1423c58f2cf58',1,'Tabla::Sudoku()']]]
 ];

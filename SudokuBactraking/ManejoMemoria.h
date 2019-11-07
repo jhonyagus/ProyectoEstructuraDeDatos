@@ -1,3 +1,10 @@
+/**
+    *@file Manejo Memoria.h
+    *@version 2.0
+    *@author Antoni Toapanta
+    *@title Funciones Independientes
+    *@brief Funciones Utilizadas en la Reserva de memoria y escritura en un archivo
+    */
 /***********************************************************************
  * Module: Manejo de memoria.h
  * Author:  RODRIGO
@@ -12,7 +19,11 @@
 #include <stdio.h>
 #include<fstream>
 using namespace std;
-
+/**
+    @brief Reservar memoria
+    @param Fila,Columna
+    @return Una reserva de memoria dinamica entera
+    */
 int **reservar(int fila,int colum)
 {
     int **m,j;
@@ -23,6 +34,11 @@ int **reservar(int fila,int colum)
     }
     return m;
 }
+/**
+    @brief Agregar a mi arreglo dinamico
+    @param **matriz,tamanio
+    @return Nada
+    */
 void agregar(int **matriz,int tam)
 {
     for(int i=0;i<tam;i++)
@@ -35,6 +51,11 @@ void agregar(int **matriz,int tam)
     }
 
 }
+/**
+    @brief Muestrai arreglo dinamico
+    @param **matriz,fila,columna
+    @return Nada
+    */
 void mostrar(int**matriz,int fila,int columna)
 {
     for(int i=0;i<fila;i++)
@@ -53,6 +74,11 @@ void mostrar(int**matriz,int fila,int columna)
         cout<<endl;
     }
 }
+/**
+    @brief Libera memoria
+    @param **matriz,columna
+    @return Nada
+    */
 void liberarMemoria(int **matriz,int columna)
 {
     for(int i=0;i<columna;i++)
@@ -61,6 +87,11 @@ void liberarMemoria(int **matriz,int columna)
     }
     delete []matriz;
 }
+/**
+    @brief Llena de 0 mi matriz
+    @param **matriz,columna
+    @return Nada
+    */
 void encerar(int ** m,int fila, int columna)
 {
     for(int i=0;i<fila;i++)
@@ -71,6 +102,11 @@ void encerar(int ** m,int fila, int columna)
         }
     }
 }
+/**
+    @brief Llena de aleatorioa una arreglo Unidimencional
+    @param **matriz,columna
+    @return Nada
+    */
 void llenarAleatorioUni(int *m,int tam)
 {
     int aux;
@@ -95,33 +131,11 @@ void llenarAleatorioUni(int *m,int tam)
             *(m+i) = aux;
         }
 }
-void llenarAleatorios(int ** m,int fila, int columna,int n)
-{
-    int *uni,f=0;
-    uni=new int[columna*fila];
-    llenarAleatorioUni(uni,(columna*fila));
-    for(int i=0;i<fila;i++)
-    {
-        for(int j=0;j<columna;j++)
-        {
-            if(*(uni+f)==9)
-            {
-                *(*(m+i)+j)=7;
-            }
-            else{
-             *(*(m+i)+j)=*(uni+f);
-            }
-            if(i==(fila-1) && j==(columna-1))
-            {
-                 *(*(m+i)+j)=0;
-            }
-            else{
-                f++;
-            }
-        }
-    }
-    delete[]uni;
-}
+/**
+    @brief Escribe en un archivo csv
+    @param **matriz,columna
+    @return Nada
+    */
 void escribirArchivo(int **guardar,int tam)
 {
     ofstream archivo;

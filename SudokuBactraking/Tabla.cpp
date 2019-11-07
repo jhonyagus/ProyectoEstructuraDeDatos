@@ -1,3 +1,10 @@
+/**
+    *@file Tabla.cpp
+    *@version 2.0
+    *@author Antoni Toapanta
+    *@title Funciones de la Clase Tabla
+    *@brief Implementacion de los metos de la Clase Tabla
+    */
 /***********************************************************************
  * Module:  Tabla.cpp
  * Author:  RODRIGO
@@ -7,7 +14,11 @@
 
 #include "Tabla.h"
 #include "ManejoMemoria.h"
-
+/**
+    @brief Busaca la posisicon donde puede hacer el cambio
+    @param Fila,Columna
+    @return Verdadero si encuentra un 0 donde puede hacer el cambio si no un falso
+    */
 bool Tabla::buscarLugar(int& fila, int& col)
 {
     for (fila = 0; fila < 9; fila++)
@@ -16,42 +27,55 @@ bool Tabla::buscarLugar(int& fila, int& col)
                 return true;
     return false;
 }
+/**
+    @brief Comprueba si cumple las condiciones de Sudoku
+    @param Fila,Columna,num
+    @return Verdadero si cumple  si no un falso
+    */
 bool Tabla::comprobar( int fila, int col, int num)
 {
     return !UtilizadoEnFila(fila, num) &&!UtilizadoEnColumna(col, num) &&!UtilizadoEnSudoku(fila - fila % 3 ,col - col % 3, num) &&*(*(tablero+fila)+col)== 0;
 }
-
+/**
+    @brief Muestra el Sudoku y guarda informacion en el .csv
+    */
 void Tabla::mostrarT()
 {
     mostrar(tablero,9,9);
-    escribirArchivo(tablero,9);
 }
-
+/**
+    @brief Obtiene tablero
+    */
 
 int** Tabla::getTablero(void)
 {
    return tablero;
 }
-
+/**
+    @brief Camcio de tablero
+    */
 
 void Tabla::setTablero(int** newTablero)
 {
    tablero = newTablero;
 }
 
-
+/**
+    @brief Constructor de la Clase
+    */
 Tabla::Tabla()
 {
     this->tablero=reservar(9,9);
     encerar(this->tablero,9,9);
 }
 
-
+/**
+    @brief Destructor de la clase
+    */
 Tabla::~Tabla()
 {
     liberarMemoria(this->tablero,9);
 }
-
 
 bool Tabla::Sudoku()
 {
@@ -64,7 +88,7 @@ bool Tabla::Sudoku()
         if (comprobar(fila, col, num))
         {
             *(*(tablero+fila)+col) = num;
-            mostrarT();
+            escribirArchivo(tablero,9);
             cout<<endl;
             if (Sudoku())
                 return true;

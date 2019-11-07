@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['main_9',['main',['../_proyecto_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Proyecto.cpp']]],
-  ['manejomemoria_2eh_10',['ManejoMemoria.h',['../_manejo_memoria_8h.html',1,'']]],
-  ['mostrar_11',['mostrar',['../_manejo_memoria_8h.html#a1dd00b47a84fa0dc11a2bb2e359bce17',1,'ManejoMemoria.h']]],
-  ['mostrart_12',['mostrarT',['../class_tabla.html#aa5e3142a451fcd892c56b4c7a95acb09',1,'Tabla']]]
+  ['liberarmemoria_12',['liberarMemoria',['../_manejo_memoria_8h.html#a439124215b2b560108c294738638e1e4',1,'ManejoMemoria.h']]],
+  ['llenaraleatoriouni_13',['llenarAleatorioUni',['../_manejo_memoria_8h.html#a1c5e9732afe977ceb0902f072a400599',1,'ManejoMemoria.h']]]
 ];
