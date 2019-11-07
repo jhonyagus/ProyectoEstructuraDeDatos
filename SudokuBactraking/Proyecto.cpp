@@ -30,8 +30,13 @@ int main()
     cout<<endl;
     Ingreso lee;
     int opc;
+    cout<<"============================================================="<<endl;
+    cout<<"\tToapanta Antoni-Naranjo Jhony"<<endl;
+    cout<<"\tEstructura de datos\n\t2019-2020"<<endl;
+    cout<<"==============================================================\n";
+        
     do{
-        cout<<"Bienvenid@\n"<<"Escoja la opcion que desea realizar"<<endl;
+        cout<<"Escoja la opcion que desea realizar"<<endl;
         cout<<"1. Mostrar solucion sudoku\n2.Mostrar ayuda del programa";
         opc = lee.ingresarInt("\n---> ");
     }while(opc != 1 && opc != 2 );
