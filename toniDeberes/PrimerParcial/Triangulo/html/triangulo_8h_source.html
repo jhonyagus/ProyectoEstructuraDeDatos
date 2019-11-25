@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Triangulo: Fichero Fuente triangulo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Triangulo
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Uso de ley seno y coseno</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">triangulo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="triangulo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include&lt;math.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">   53</a></span>&#160;<span class="preprocessor">#define PI 3.14</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_triangulo.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_triangulo.html">Triangulo</a>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span>:<span class="comment">//atributos</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">double</span> lado1,lado2,lado3;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">float</span> angulo1,angulo2,angulo3;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span>:<span class="comment">//metodos</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>        <a class="code" href="class_triangulo.html">Triangulo</a>(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_triangulo.html">Triangulo</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_triangulo.html">Triangulo</a>(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_triangulo.html">Triangulo</a>(<span class="keywordtype">double</span>,<span class="keywordtype">double</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> setLado1(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> setLado2(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> setLado3(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> setAngulo1(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> setAngulo2(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> setAngulo3(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">float</span> getLado1();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">float</span> getLado2();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">float</span> getLado3();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">float</span> getAngulo1();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">float</span> getAngulo2();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">float</span> getAngulo3();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">double</span> leyCoseno(<span class="keywordtype">double</span>,<span class="keywordtype">double</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">void</span> leyCoseno2(<span class="keywordtype">double</span>,<span class="keywordtype">double</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> leySeno2(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">double</span> leySeno(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> mostrar();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> mostrarLados();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> mostrarAngulos();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;};</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_triangulo.html#aa7beab2ccc132f73fc15ddc738e512a0">  148</a></span>&#160;    <a class="code" href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">Triangulo::Triangulo</a>(<span class="keywordtype">float</span> lado1,<span class="keywordtype">float</span> lado2,<span class="keywordtype">float</span> lado3,<span class="keywordtype">float</span> angulo1,<span class="keywordtype">float</span> angulo2,<span class="keywordtype">float</span> angulo3){</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        this-&gt;lado1=lado1;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        this-&gt;lado2=lado2;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        this-&gt;lado3=lado3;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        this-&gt;angulo1=angulo1;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        this-&gt;angulo2=angulo2;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        this-&gt;angulo3=angulo3;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">  156</a></span>&#160;    <a class="code" href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">Triangulo::Triangulo</a>(){</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        this-&gt;lado1=0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        this-&gt;lado2=0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        this-&gt;lado3=0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        this-&gt;angulo1=0;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        this-&gt;angulo2=0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        this-&gt;angulo3=0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_triangulo.html#a6b798e0b62b49463b3054098e0c7b85b">  164</a></span>&#160;    <a class="code" href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">Triangulo::Triangulo</a>(<span class="keywordtype">float</span> angulo2,<span class="keywordtype">float</span> angulo3,<span class="keywordtype">double</span> lado2){</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        this-&gt;lado1=0;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        this-&gt;lado2=lado2;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        this-&gt;lado3=0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        this-&gt;angulo1=0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        this-&gt;angulo2=angulo2;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        this-&gt;angulo3=angulo3;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="class_triangulo.html#a94ed1c5d17d14d231b57896c4bf374f6">  172</a></span>&#160;    <a class="code" href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">Triangulo::Triangulo</a>(<span class="keywordtype">double</span> l1,<span class="keywordtype">double</span> l2,<span class="keywordtype">float</span> a3){</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        this-&gt;lado1=l1;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        this-&gt;lado2=l2;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;lado3=0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        this-&gt;angulo1=0;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        this-&gt;angulo2=0;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        this-&gt;angulo3=a3;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="class_triangulo.html#ae6c99edc2264482fed3c84741b788962">  180</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#ae6c99edc2264482fed3c84741b788962">Triangulo::setAngulo1</a>(<span class="keywordtype">float</span> angulo1){</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        angulo1=angulo1;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_triangulo.html#afae60861ea68c5de18df66c20db730da">  183</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#afae60861ea68c5de18df66c20db730da">Triangulo::setLado1</a>(<span class="keywordtype">float</span> lado1){</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        lado1=lado1;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="class_triangulo.html#af38f9db3100d03487d47dba850144daf">  186</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#af38f9db3100d03487d47dba850144daf">Triangulo::setAngulo2</a>(<span class="keywordtype">float</span> angulo2){</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        angulo2=angulo2;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="class_triangulo.html#a23c3fddbc8f016b5be27165823198197">  189</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a23c3fddbc8f016b5be27165823198197">Triangulo::setLado2</a>(<span class="keywordtype">float</span> lado2){</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        lado2=lado2;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="class_triangulo.html#a3195545480ad57d99081c71cebfca8fc">  192</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a3195545480ad57d99081c71cebfca8fc">Triangulo::setAngulo3</a>(<span class="keywordtype">float</span> angulo3){</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        angulo3=angulo3;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_triangulo.html#a06a82b679138d81c55b8f52ba2ebfc80">  195</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a06a82b679138d81c55b8f52ba2ebfc80">Triangulo::setLado3</a>(<span class="keywordtype">float</span> lado3){</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        lado3=lado3;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_triangulo.html#a80f5cad03045f8412d721d2cfec0bdcd">  198</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a80f5cad03045f8412d721d2cfec0bdcd">Triangulo::getAngulo1</a>(){</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> angulo1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="class_triangulo.html#a7fe268ca203546cf2fa933216aa43260">  201</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a7fe268ca203546cf2fa933216aa43260">Triangulo::getLado1</a>(){</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> lado1;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_triangulo.html#a67902ab6bd32b0c49623cf6bc2bc3815">  204</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a67902ab6bd32b0c49623cf6bc2bc3815">Triangulo::getAngulo2</a>(){</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> angulo2;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_triangulo.html#a7ee40ead653dc0141591f1073bd922e3">  207</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a7ee40ead653dc0141591f1073bd922e3">Triangulo::getLado2</a>(){</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> lado2;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="class_triangulo.html#a4224aaaba8a708d7cf5402ced9f3cab6">  210</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a4224aaaba8a708d7cf5402ced9f3cab6">Triangulo::getAngulo3</a>(){</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">return</span> angulo3;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_triangulo.html#a7999cf31202dbc99bc19637ff06f8098">  213</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_triangulo.html#a7999cf31202dbc99bc19637ff06f8098">Triangulo::getLado3</a>(){</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">return</span> lado3;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="class_triangulo.html#a12a1e01f2c8c03ae289f3abf5c7bf1c7">  216</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a12a1e01f2c8c03ae289f3abf5c7bf1c7">Triangulo::mostrar</a>()</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado A: &quot;</span>&lt;&lt;lado1&lt;&lt;<span class="stringliteral">&quot;   Angulo a: &quot;</span>&lt;&lt;angulo1&lt;&lt;endl;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado B: &quot;</span>&lt;&lt;lado2&lt;&lt;<span class="stringliteral">&quot;   Angulo b: &quot;</span>&lt;&lt;angulo2&lt;&lt;endl;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado C: &quot;</span>&lt;&lt;lado3&lt;&lt;<span class="stringliteral">&quot;   Angulo c: &quot;</span>&lt;&lt;angulo3&lt;&lt;endl;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_triangulo.html#acc24b34bf724da1f7101f5756c110bed">  222</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#acc24b34bf724da1f7101f5756c110bed">Triangulo::mostrarLados</a>()</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado A: &quot;</span>&lt;&lt;lado1&lt;&lt;endl;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado B: &quot;</span>&lt;&lt;lado2&lt;&lt;endl;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Angulo c: &quot;</span>&lt;&lt;angulo3&lt;&lt;endl;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_triangulo.html#a85c4dd3d35f9abb77ff47510d3391c84">  228</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a85c4dd3d35f9abb77ff47510d3391c84">Triangulo::mostrarAngulos</a>()</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Angulo b: &quot;</span>&lt;&lt;angulo2&lt;&lt;endl;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Angulo c: &quot;</span>&lt;&lt;angulo3&lt;&lt;endl;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Lado B: &quot;</span>&lt;&lt;lado2&lt;&lt;endl;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="class_triangulo.html#a52b58faf617511dca9f9b147ca1f9981">  234</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_triangulo.html#a52b58faf617511dca9f9b147ca1f9981">Triangulo::leyCoseno</a>(<span class="keywordtype">double</span> lado1,<span class="keywordtype">double</span> lado2,<span class="keywordtype">float</span> angulo3)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">return</span> sqrt(pow(lado1,2)+pow(lado2,2)-2*(lado1*lado2)*cos(angulo3*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180));</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="class_triangulo.html#a3ca4b0c25de3d473d98d61919dc96b9a">  238</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a3ca4b0c25de3d473d98d61919dc96b9a">Triangulo::leyCoseno2</a>(<span class="keywordtype">double</span> lado1,<span class="keywordtype">double</span> lado2,<span class="keywordtype">float</span> angulo3)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">double</span> q;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        q=sqrt(pow(lado1,2)+pow(lado2,2)-2*(lado1*lado2)*cos(angulo3*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180));</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;El Lado C es: &quot;</span>&lt;&lt;q&lt;&lt;endl;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="class_triangulo.html#ab697d1960742d47dda068d60d2822e4a">  244</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_triangulo.html#ab697d1960742d47dda068d60d2822e4a">Triangulo::leySeno</a>(<span class="keywordtype">float</span> angulo3,<span class="keywordtype">float</span> angulo2,<span class="keywordtype">double</span> lado2)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">return</span> (lado2*sin(angulo3*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180))/(sin(angulo2*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_triangulo.html#a980bcb11cf96be07d24a952950a27042">  248</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_triangulo.html#a980bcb11cf96be07d24a952950a27042">Triangulo::leySeno2</a>(<span class="keywordtype">float</span> angulo2,<span class="keywordtype">float</span> angulo3,<span class="keywordtype">double</span> lado2)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">double</span> d;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        d=(lado2*sin(angulo3*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180))/(sin(angulo2*<a class="code" href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/180));</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;El Lado C es :&quot;</span>&lt;&lt;d&lt;&lt;endl;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_triangulo_html_a52b58faf617511dca9f9b147ca1f9981"><div class="ttname"><a href="class_triangulo.html#a52b58faf617511dca9f9b147ca1f9981">Triangulo::leyCoseno</a></div><div class="ttdeci">double leyCoseno(double, double, float)</div><div class="ttdoc">leyCoseno Calcula el valor de un lado</div><div class="ttdef"><b>Definition:</b> triangulo.h:234</div></div>
+<div class="ttc" id="aclass_triangulo_html_af38f9db3100d03487d47dba850144daf"><div class="ttname"><a href="class_triangulo.html#af38f9db3100d03487d47dba850144daf">Triangulo::setAngulo2</a></div><div class="ttdeci">void setAngulo2(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:186</div></div>
+<div class="ttc" id="aclass_triangulo_html_a12a1e01f2c8c03ae289f3abf5c7bf1c7"><div class="ttname"><a href="class_triangulo.html#a12a1e01f2c8c03ae289f3abf5c7bf1c7">Triangulo::mostrar</a></div><div class="ttdeci">void mostrar()</div><div class="ttdoc">mostrar Muestra los angulos y los lados</div><div class="ttdef"><b>Definition:</b> triangulo.h:216</div></div>
+<div class="ttc" id="atriangulo_8h_html_a598a3330b3c21701223ee0ca14316eca"><div class="ttname"><a href="triangulo_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a></div><div class="ttdeci">#define PI</div><div class="ttdef"><b>Definition:</b> triangulo.h:53</div></div>
+<div class="ttc" id="aclass_triangulo_html_a85c4dd3d35f9abb77ff47510d3391c84"><div class="ttname"><a href="class_triangulo.html#a85c4dd3d35f9abb77ff47510d3391c84">Triangulo::mostrarAngulos</a></div><div class="ttdeci">void mostrarAngulos()</div><div class="ttdoc">mostrarAngulos Muestra los angulos ingresados</div><div class="ttdef"><b>Definition:</b> triangulo.h:228</div></div>
+<div class="ttc" id="aclass_triangulo_html_ae6c99edc2264482fed3c84741b788962"><div class="ttname"><a href="class_triangulo.html#ae6c99edc2264482fed3c84741b788962">Triangulo::setAngulo1</a></div><div class="ttdeci">void setAngulo1(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:180</div></div>
+<div class="ttc" id="aclass_triangulo_html_a3195545480ad57d99081c71cebfca8fc"><div class="ttname"><a href="class_triangulo.html#a3195545480ad57d99081c71cebfca8fc">Triangulo::setAngulo3</a></div><div class="ttdeci">void setAngulo3(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:192</div></div>
+<div class="ttc" id="aclass_triangulo_html_a4224aaaba8a708d7cf5402ced9f3cab6"><div class="ttname"><a href="class_triangulo.html#a4224aaaba8a708d7cf5402ced9f3cab6">Triangulo::getAngulo3</a></div><div class="ttdeci">float getAngulo3()</div><div class="ttdef"><b>Definition:</b> triangulo.h:210</div></div>
+<div class="ttc" id="aclass_triangulo_html_a67902ab6bd32b0c49623cf6bc2bc3815"><div class="ttname"><a href="class_triangulo.html#a67902ab6bd32b0c49623cf6bc2bc3815">Triangulo::getAngulo2</a></div><div class="ttdeci">float getAngulo2()</div><div class="ttdef"><b>Definition:</b> triangulo.h:204</div></div>
+<div class="ttc" id="aclass_triangulo_html_a23c3fddbc8f016b5be27165823198197"><div class="ttname"><a href="class_triangulo.html#a23c3fddbc8f016b5be27165823198197">Triangulo::setLado2</a></div><div class="ttdeci">void setLado2(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:189</div></div>
+<div class="ttc" id="aclass_triangulo_html_acc24b34bf724da1f7101f5756c110bed"><div class="ttname"><a href="class_triangulo.html#acc24b34bf724da1f7101f5756c110bed">Triangulo::mostrarLados</a></div><div class="ttdeci">void mostrarLados()</div><div class="ttdoc">mostrarLados Muestra los lados ingresados</div><div class="ttdef"><b>Definition:</b> triangulo.h:222</div></div>
+<div class="ttc" id="aclass_triangulo_html_a7999cf31202dbc99bc19637ff06f8098"><div class="ttname"><a href="class_triangulo.html#a7999cf31202dbc99bc19637ff06f8098">Triangulo::getLado3</a></div><div class="ttdeci">float getLado3()</div><div class="ttdef"><b>Definition:</b> triangulo.h:213</div></div>
+<div class="ttc" id="aclass_triangulo_html_a06a82b679138d81c55b8f52ba2ebfc80"><div class="ttname"><a href="class_triangulo.html#a06a82b679138d81c55b8f52ba2ebfc80">Triangulo::setLado3</a></div><div class="ttdeci">void setLado3(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:195</div></div>
+<div class="ttc" id="aclass_triangulo_html_a80f5cad03045f8412d721d2cfec0bdcd"><div class="ttname"><a href="class_triangulo.html#a80f5cad03045f8412d721d2cfec0bdcd">Triangulo::getAngulo1</a></div><div class="ttdeci">float getAngulo1()</div><div class="ttdef"><b>Definition:</b> triangulo.h:198</div></div>
+<div class="ttc" id="aclass_triangulo_html_a3ca4b0c25de3d473d98d61919dc96b9a"><div class="ttname"><a href="class_triangulo.html#a3ca4b0c25de3d473d98d61919dc96b9a">Triangulo::leyCoseno2</a></div><div class="ttdeci">void leyCoseno2(double, double, float)</div><div class="ttdoc">leyCoseno2 Calcula el valor de un lado</div><div class="ttdef"><b>Definition:</b> triangulo.h:238</div></div>
+<div class="ttc" id="aclass_triangulo_html_a7fe268ca203546cf2fa933216aa43260"><div class="ttname"><a href="class_triangulo.html#a7fe268ca203546cf2fa933216aa43260">Triangulo::getLado1</a></div><div class="ttdeci">float getLado1()</div><div class="ttdef"><b>Definition:</b> triangulo.h:201</div></div>
+<div class="ttc" id="aclass_triangulo_html_ab697d1960742d47dda068d60d2822e4a"><div class="ttname"><a href="class_triangulo.html#ab697d1960742d47dda068d60d2822e4a">Triangulo::leySeno</a></div><div class="ttdeci">double leySeno(float, float, double)</div><div class="ttdoc">leySeno Calcula el valor de un lado</div><div class="ttdef"><b>Definition:</b> triangulo.h:244</div></div>
+<div class="ttc" id="aclass_triangulo_html_a980bcb11cf96be07d24a952950a27042"><div class="ttname"><a href="class_triangulo.html#a980bcb11cf96be07d24a952950a27042">Triangulo::leySeno2</a></div><div class="ttdeci">void leySeno2(float, float, double)</div><div class="ttdoc">leySeno2 Calcula el valor de un lado</div><div class="ttdef"><b>Definition:</b> triangulo.h:248</div></div>
+<div class="ttc" id="aclass_triangulo_html_a905d421bd19655a979ccad9e2998db0c"><div class="ttname"><a href="class_triangulo.html#a905d421bd19655a979ccad9e2998db0c">Triangulo::Triangulo</a></div><div class="ttdeci">Triangulo()</div><div class="ttdoc">Constructor Vacio.</div><div class="ttdef"><b>Definition:</b> triangulo.h:156</div></div>
+<div class="ttc" id="aclass_triangulo_html_afae60861ea68c5de18df66c20db730da"><div class="ttname"><a href="class_triangulo.html#afae60861ea68c5de18df66c20db730da">Triangulo::setLado1</a></div><div class="ttdeci">void setLado1(float)</div><div class="ttdef"><b>Definition:</b> triangulo.h:183</div></div>
+<div class="ttc" id="aclass_triangulo_html_a7ee40ead653dc0141591f1073bd922e3"><div class="ttname"><a href="class_triangulo.html#a7ee40ead653dc0141591f1073bd922e3">Triangulo::getLado2</a></div><div class="ttdeci">float getLado2()</div><div class="ttdef"><b>Definition:</b> triangulo.h:207</div></div>
+<div class="ttc" id="aclass_triangulo_html"><div class="ttname"><a href="class_triangulo.html">Triangulo</a></div><div class="ttdoc">Clase para la creacion de un triangulo.</div><div class="ttdef"><b>Definition:</b> triangulo.h:58</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>
