@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1575667168 source:c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\main.cpp
+	<iostream>
+	<stdlib.h>
+	"Nodo.cpp"
+	"ListaCircularDoble.cpp"
+	"ingreso.h"
+	<time.h>
+	<windows.h>
+	<stdio.h>
+
+1575656748 c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\nodo.cpp
+	"Nodo.h"
+
+1575219501 c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\nodo.h
+
+1575666595 c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\listacirculardoble.cpp
+	<iostream>
+	"ListaCircularDoble.h"
+	"Nodo.h"
+
+1575665607 c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\listacirculardoble.h
+	<iostream>
+	"Nodo.h"
+
+1572887901 c:\users\jhony\documents\proyectoscodeblocks\listascircularesdobles\ingreso.h
+	<iostream>
+	<string>
+	<stdlib.h>
+
