@@ -6,6 +6,7 @@
 #include "ManejoMemoria.h"
 #include<time.h>
 using namespace miniwin;
+using namespace std;
 void pintar(int **tablero,int x, int y)
 {
     Piezas p;
@@ -19,7 +20,21 @@ void pintar(int **tablero,int x, int y)
         }
     }
 }
-using namespace std;
+
+bool tablero_colision(int **T, Piezas& P) {
+      if (P.getX() < 0 || P.getX() >= 20) {
+         return true;
+      }
+      if (P.getY()< 0 || P.getY() >= 13) {
+         return true;
+      }
+      // Mirar otras piezas
+      if (*(*(T+P.getX())+P.getY()) != 0) {
+         return true;
+      }
+   return false;
+}
+
 int main() {
     /*char soundfile[]="sonido.wav";
     cout<<PlaySound((LPCSTR)soundfile, NULL, SND_FILENAME | SND_ASYNC )<<endl;*/
@@ -45,7 +60,8 @@ int main() {
    cout<<endl;
    refresca();
    while(y!=19){
-        if(tic>5)
+        Piezas copia = p;
+        if(t == NINGUNA && tic>20)
         {
             tic=0;
             t=ABAJO;
@@ -54,31 +70,49 @@ int main() {
         {
             if(x<=11)
             {
-                agregarPosicion(tablero,x,y,0);
+
+                    agregarPosicion(tablero,x,y,0);
                 x++;
+                p.setX(x);
+
+
             }
         }
         else if(t==IZQUIERDA)
         {
             if(x>0)
             {
+
                 agregarPosicion(tablero,x,y,0);
                 x--;
+                p.setX(x);
             }
         }
         else if(t==ABAJO)
         {
             agregarPosicion(tablero,x,y,0);
             y++;
-            agregarPosicion(tablero,x,y,p.unaPieza(numPieza));
-            mostrar(tablero,20,13);
-            cout<<endl;
+            p.setY(y);
+            //agregarPosicion(tablero,x,y,p.unaPieza(numPieza));
+            //mostrar(tablero,20,13);
+            //cout<<endl;
+
         }
+
+        if(*(*(tablero+p.getX())+p.getY()) != 0 ){
+            p = copia;
+            if(t == ABAJO){
+                agregarPosicion(tablero,x,y,p.unaPieza(numPieza));
+                 mostrar(tablero,20,13);
+                cout<<endl;
+            }
+        }
+
         if(t!=NINGUNA)
         {
             borra();
-            p.setX(x);
-            p.setY(y);
+            //p.setX(x);
+            //p.setY(y);
             pintar(tablero,20,13);
             p.unaPieza(numPieza);
             refresca();

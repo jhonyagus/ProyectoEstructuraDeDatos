@@ -7,6 +7,8 @@
 #include <iostream>
 #include "ListaCircularDoble.h"
 #include "Nodo.h"
+#include "PersonalLibrary.h"
+
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       ListaSimple::ingresoInicio(Persona obj)
@@ -75,7 +77,7 @@ void ListaCircularDoble::ingresoFinal(int obj)
 
 void ListaCircularDoble::imprimirDatos()
 {
-    if(!vacia()){
+    /*if(!vacia()){
         Nodo *p = primero;
     do
     {
@@ -86,8 +88,122 @@ void ListaCircularDoble::imprimirDatos()
     cout << "\n";
     }else{
         cout<<"Lista vacia"<<endl;
-    }
+    }*/
 
+    int x=8,y;
+	Nodo* Aux=new Nodo();
+	Aux=primero;
+
+
+	do{
+        y=34;
+		switch(Aux->getDatos())
+		{
+			case 0:
+				color(1);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf(" %c%c%c ",219,219,219);
+				break;
+
+			case 1:
+				color(2);
+				gotoxy(x,y++);
+				printf(" %c%c  \n",219,219);gotoxy(x,y++);
+				printf("%c %c  \n",219,219);gotoxy(x,y++);
+				printf("  %c   \n",219);gotoxy(x,y++);
+				printf("  %c   \n",219);gotoxy(x,y++);
+				printf("%c%c%c%c%c",220,220,219,220,220,220,220);gotoxy(x,y++);
+				break;
+
+
+			case 2:
+				color(3);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf("   %c \n",219);gotoxy(x,y++);
+				printf(" %c%c  \n",220,219);gotoxy(x,y++);
+				printf("%c%c%c%c%c",219,220,220,220,220,220,220);gotoxy(x,y++);
+				break;
+
+
+			case 3:
+				color(4);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf("   %c \n",219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf(" %c%c%c ",219,219,219);gotoxy(x,y++);
+				break;
+
+			case 4:
+				color(6);
+				gotoxy(x,y++);
+				printf("   %c%c\n",219,219);gotoxy(x,y++);
+				printf("  %c %c\n",219,219);gotoxy(x,y++);
+				printf(" %c  %c\n",219,219);gotoxy(x,y++);
+				printf("%c%c%c%c%c\n",219,220,220,220,219);gotoxy(x,y++);
+				printf("    %c\n",219);gotoxy(x,y++);
+				break;
+
+			case 5:
+				color(7);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf(" %c   \n",219);gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,220);gotoxy(x,y++);
+				printf("   %c \n",219);gotoxy(x,y++);
+				printf(" %c%c  ",219,219);gotoxy(x,y++);
+				break;
+
+			case 6:
+				color(12);
+				gotoxy(x,y++);
+				printf("  %c%c \n",220,219);gotoxy(x,y++);
+				printf(" %c   \n",219);gotoxy(x,y++);
+				printf("%c%c%c%c\n",219,220,220,220);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf(" %c%c%c ",219,219,219);gotoxy(x,y++);
+				break;
+
+			case 7:
+				color(9);
+				gotoxy(x,y++);
+			    printf("%c%c%c%c%c\n",220,220,220,220,220,220,220);gotoxy(x,y++);
+				printf("    %c\n",219);gotoxy(x,y++);
+				printf("   %c\n",219);gotoxy(x,y++);
+				printf("  %c\n",219);gotoxy(x,y++);
+				printf(" %c   ",219);gotoxy(x,y++);
+				break;
+
+			case 8:
+				color(10);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf(" %c%c%c ",219,219,219);gotoxy(x,y++);
+			    break;
+
+			case 9:
+				color(11);
+				gotoxy(x,y++);
+				printf(" %c%c%c \n",219,219,219);gotoxy(x,y++);
+				printf("%c   %c\n",219,219);gotoxy(x,y++);
+				printf("%c%c%c%c%c\n",219,220,220,220,219);gotoxy(x,y++);
+				printf("    %c\n",219);gotoxy(x,y++);
+				printf(" %c%c%c ",220,220,219);gotoxy(x,y++);
+			    break;
+		}
+		x+=6;
+        Aux=Aux->getSiguiente();
+	}while(Aux!=primero);
 }
 
 ListaCircularDoble::ListaCircularDoble(){

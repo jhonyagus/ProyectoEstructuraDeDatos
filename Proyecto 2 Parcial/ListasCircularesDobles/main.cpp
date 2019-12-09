@@ -6,27 +6,13 @@
 #include <time.h>
 #include <windows.h>
 #include <stdio.h>
+#include "PersonalLibrary.h"
 
 using namespace std;
 
 int aleatorios()
 {
-    return rand()%3;
-}
-
-void color(int x)
-{
-	SetConsoleTextAttribute(GetStdHandle (STD_OUTPUT_HANDLE),x);
-}
-
-void gotoxy(int x, int y)
-{
-	HANDLE hCon;
-	hCon=GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD dwPos;
-	dwPos.X=x;
-	dwPos.Y=y;
-	SetConsoleCursorPosition(hCon,dwPos);
+    return rand()%10;
 }
 
 void margen()
@@ -54,31 +40,84 @@ void margen()
 	color(15);
 }
 
+int posicionAIndice(int x){
+	return (x-8)/6;
+}
 
 int main()
 {
-    margen();
-    cout<<endl;
+    bool primera=true;
+	char tecla=0;
+	int x=32,y=4;
+	int col,fil;
+	int numero;
+	int i=0;
+	srand(time(NULL));
+
+
+
     bool bandera = false;
     srand(time(NULL));
     ListaCircularDoble *acceso = new ListaCircularDoble();
-    /*acceso->ingresoInicio(aleatorios());
-    acceso->ingresoFinal(aleatorios());
-    acceso->ingresoFinal(aleatorios());
-    acceso->insertarPosicion(aleatorios(),3);
-    acceso->insertarPosicion(aleatorios(),3);
-    acceso->insertarPosicion(aleatorios(),4);
-    acceso->ingresoInicio(aleatorios());
-    acceso->ingresoFinal(aleatorios());
-    acceso->ingresoFinal(aleatorios());*/
-    acceso->ingresoFinal(1);
-    acceso->ingresoFinal(1);
-    acceso->ingresoFinal(1);
-    acceso->ingresoFinal(1);
-    do{
+    acceso->ingresoFinal(6);
+    acceso->ingresoFinal(4);
+    acceso->ingresoFinal(9);
+    acceso->ingresoFinal(2);
+
+
+    do
+	{
+		system("cls");
+		margen();
+		if(primera)
+		{
+			numero=aleatorios();
+			primera=false;
+			gotoxy(4,45);
+		}
+		acceso->imprimirDatos();
+		gotoxy(x,y);
+		numbers(numero,x,y);
+		color(15);
+		tecla=getch();
+		switch(tecla)
+		{
+			case TECLA_ABAJO:
+				y++;
+				if(y>=28){
+                    acceso->insertarPosicion(numero, posicionAIndice(x)+1);
+
+				    do{
+
+                        acceso->borrarIguales(&bandera);
+				    }while(bandera);
+					y=4;
+					primera=true;
+				}
+				break;
+			case TECLA_DERECHA:
+				x+=6;
+				if(x>=92)
+					x=8;
+				break;
+			case TECLA_IZQUIERDA:
+				x-=6;
+				if(x<=2)
+					x=92;
+				break;
+
+		}
+		if(acceso->vacia())
+            break;
+    }while(tecla!=TECLA_ENTER);
+	system("cls");
+	cout<<"Juego terminado"<<endl;
+	if(acceso->vacia()){
+        cout<<"FELICIDADES HAS GANADO!!";
+	}else{
+        cout<<"No has ganado"<<endl<<"Tu lista es: ";
         acceso->imprimirDatos();
-        acceso->borrarIguales(&bandera);
-    }while(bandera);
+	}
     delete acceso;
     return 0;
 }

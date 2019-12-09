@@ -48,3 +48,48 @@
 	<time.h>
 	<stdio.h>
 
+1575772609 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
+	"miniwin.h"
+	<iostream>
+	<stdlib.h>
+	"Piezas.h"
+	<windows.h>
+	"ManejoMemoria.h"
+	<time.h>
+
+1575763526 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.h
+	<iostream>
+
+1575763526 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.h
+
+1575763526 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejomemoria.h
+	<iostream>
+	<conio.h>
+	<time.h>
+	<stdio.h>
+
+1575763526 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
+1575763526 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.cpp
+	"Piezas.h"
+	"miniwin.h"
+
