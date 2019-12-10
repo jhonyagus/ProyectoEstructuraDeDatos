@@ -43,7 +43,6 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="miniwin.cpp" />
 		<Unit filename="miniwin.h" />
-		<Unit filename="sonido.wav" />
 		<Extensions>
 			<code_completion />
 			<envvars />

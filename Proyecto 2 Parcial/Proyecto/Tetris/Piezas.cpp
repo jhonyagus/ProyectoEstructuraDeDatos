@@ -172,39 +172,57 @@ int Piezas::vacio(void)
     pieza(getX(),getY(),NEGRO);
     return 0;
 }
+int Piezas::getNum(void)
+{
+    return num;
+}
+void Piezas::setNum(int n)
+{
+    num=n;
+}
 
 int Piezas::unaPieza(int pieza)
 {
     switch(pieza)
     {
         case 1:
+            setNum(1);
             return cubo1();
             break;
         case 2:
+            setNum(2);
             return cubo2();
             break;
         case 3:
+            setNum(3);
             return cubo3();
             break;
         case 4:
+            setNum(4);
             return cubo4();
             break;
         case 5:
+            setNum(5);
             return cubo5();
             break;
         case 6:
+            setNum(6);
             return cubo6();
             break;
         case 7:
+            setNum(7);
             return cubo7();
             break;
         case 8:
+            setNum(8);
             return cubo8();
             break;
         case 9:
+            setNum(9);
             return cubo9();
             break;
         case 0:
+            setNum(0);
             return vacio();
             break;
     }

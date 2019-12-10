@@ -17,6 +17,8 @@ public:
    void setY(int newY);
    void pieza(int x, int y, int col);
    int unaPieza(int pieza);
+   int getNum(void);
+   void setNum(int n);
    int cubo1(void);
    int cubo2(void);
    int cubo3(void);
@@ -31,8 +33,7 @@ protected:
 private:
    int x;
    int y;
-
-
+   int num;
 };
 
 #endif
