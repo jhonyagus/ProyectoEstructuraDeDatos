@@ -16,7 +16,7 @@ using namespace miniwin;
 void Piezas::pieza(int x, int y, int col)
 {
     color(col);
-    rectangulo_lleno(1+x*30,1+y*30,x*30+30,y*30+30);
+    rectangulo_lleno(1+x*50,1+y*50,x*50+50,y*50+50);
 }
 int Piezas::getX(void)
 {

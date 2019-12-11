@@ -7,9 +7,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include "PersonalLibrary.h"
-
 using namespace std;
-
 int aleatorios()
 {
     return rand()%10;
@@ -67,7 +65,7 @@ int main()
 
     do
 	{
-		system("cls");
+		//system("cls");
 		margen();
 		if(primera)
 		{
@@ -85,8 +83,9 @@ int main()
 			case TECLA_ABAJO:
 				y++;
 				if(y>=28){
+                    cout<<x<<endl;
                     acceso->insertarPosicion(numero, posicionAIndice(x)+1);
-
+                    cout<<posicionAIndice(x)<<endl;
 				    do{
 
                         acceso->borrarIguales(&bandera);

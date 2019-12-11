@@ -35,7 +35,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ListaCircularDoble.cpp" />
+		<Unit filename="ListaCircularDoble.h" />
+		<Unit filename="ListasCircularesDobles.cbp" />
+		<Unit filename="ListasCircularesDobles.depend" />
+		<Unit filename="ListasCircularesDobles.layout" />
+		<Unit filename="Nodo.cpp" />
+		<Unit filename="Nodo.h" />
+		<Unit filename="PersonalLibrary.h" />
+		<Unit filename="ingreso.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main.o" />
 		<Extensions>
 			<code_completion />
 			<envvars />

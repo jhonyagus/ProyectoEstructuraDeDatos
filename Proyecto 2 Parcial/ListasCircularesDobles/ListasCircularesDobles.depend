@@ -44,3 +44,59 @@
 	<pthread.h>
 	<fstream>
 
+1576027438 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\main.cpp
+	<iostream>
+	<stdlib.h>
+	"Nodo.cpp"
+	"ListaCircularDoble.cpp"
+	"ingreso.h"
+	<time.h>
+	<windows.h>
+	<stdio.h>
+	"PersonalLibrary.h"
+
+1576027487 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\nodo.cpp
+	"Nodo.h"
+	"stdlib.h"
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\nodo.h
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\listacirculardoble.cpp
+	<iostream>
+	"ListaCircularDoble.h"
+	"Nodo.h"
+	"PersonalLibrary.h"
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\listacirculardoble.h
+	<iostream>
+	"Nodo.h"
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\personallibrary.h
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<ctype.h>
+	<string.h>
+	<fstream>
+	<string>
+	<time.h>
+	<pthread.h>
+	<fstream>
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\ingreso.h
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1576023130 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\listacirculardoble.cpp
+	<iostream>
+	"ListaCircularDoble.h"
+	"Nodo.h"
+	"PersonalLibrary.h"
+
+1576027487 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\listascircularesdobles\nodo.cpp
+	"Nodo.h"
+	"stdlib.h"
+

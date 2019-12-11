@@ -48,7 +48,7 @@
 	<time.h>
 	<stdio.h>
 
-1576020171 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
+1576032005 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
 	"miniwin.h"
 	<iostream>
 	<stdlib.h>
@@ -90,7 +90,7 @@
 	<X11/keysym.h>
 	"miniwin.h"
 
-1576015177 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.cpp
+1576029936 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.cpp
 	"Piezas.h"
 	"miniwin.h"
 
@@ -100,7 +100,7 @@
 
 1576013822 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.h
 
-1576018144 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
+1576032739 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
 	<iostream>
 	"ListaCircularDoble.h"
 	"Nodo.h"

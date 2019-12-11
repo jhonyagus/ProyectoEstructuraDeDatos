@@ -206,14 +206,15 @@ void ListaCircularDoble::imprimirDatos()
 int ListaCircularDoble::tamLista()
 {
     int i=0;
-    if(!vacia()){
-        Nodo *p = primero;
-    do
+    if(!vacia())
     {
-        cout << p->getDatos()<<" ";
-        p = p->getSiguiente();
-        i++;
-    }
+        Nodo *p = primero;
+        do
+        {
+            cout << p->getDatos()<<" ";
+            p = p->getSiguiente();
+            i++;
+        }
     while (p != primero);
     cout << "\n";
     }else{
