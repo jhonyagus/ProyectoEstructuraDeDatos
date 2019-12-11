@@ -48,7 +48,7 @@
 	<time.h>
 	<stdio.h>
 
-1576032005 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
+1576040813 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
 	"miniwin.h"
 	<iostream>
 	<stdlib.h>
@@ -57,6 +57,7 @@
 	"ManejoMemoria.h"
 	<time.h>
 	"ListaCircularDoble.h"
+	"ManejoTablero.h"
 
 1575696087 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.h
 	<iostream>
@@ -100,12 +101,29 @@
 
 1576013822 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.h
 
-1576032739 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
+1576040920 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
 	<iostream>
 	"ListaCircularDoble.h"
 	"Nodo.h"
+	"PersonalLibrary.h"
 
-1576018153 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
+1576039094 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
 	<iostream>
 	"Nodo.h"
+
+1576040063 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejotablero.h
+
+1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\personallibrary.h
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<ctype.h>
+	<string.h>
+	<fstream>
+	<string>
+	<time.h>
+	<pthread.h>
+	<fstream>
 

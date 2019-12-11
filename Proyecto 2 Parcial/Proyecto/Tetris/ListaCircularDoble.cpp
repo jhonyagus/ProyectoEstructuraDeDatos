@@ -7,7 +7,7 @@
 #include <iostream>
 #include "ListaCircularDoble.h"
 #include "Nodo.h"
-
+#include "PersonalLibrary.h"
 ////////////////////////////////////////////////////////////////////////
 // Name:       ListaSimple::ingresoInicio(Persona obj)
 // Purpose:    Implementation of ListaSimple::ingresoInicio()
@@ -75,7 +75,7 @@ void ListaCircularDoble::ingresoFinal(int obj)
 
 void ListaCircularDoble::imprimirDatos()
 {
-    if(!vacia()){
+    /*if(!vacia()){
         Nodo *p = primero;
     do
     {
@@ -87,14 +87,14 @@ void ListaCircularDoble::imprimirDatos()
     }else{
         cout<<"Lista vacia"<<endl;
     }
-
-    /*int x=8,y;
+*/
+    int x=8,y;
 	Nodo* Aux=new Nodo();
 	Aux=primero;
 
 
 	do{
-        y=34;
+        y=10;
 		switch(Aux->getDatos())
 		{
 			case 0:
@@ -201,7 +201,7 @@ void ListaCircularDoble::imprimirDatos()
 		}
 		x+=6;
         Aux=Aux->getSiguiente();
-	}while(Aux!=primero);*/
+	}while(Aux!=primero);
 }
 int ListaCircularDoble::tamLista()
 {
