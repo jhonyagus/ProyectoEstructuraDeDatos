@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  ListaSimple.cpp
  * Author:  naula
- * Modified: miércoles, 13 de noviembre de 2019 10:47:31
+ * Modified: miÃ©rcoles, 13 de noviembre de 2019 10:47:31
  * Purpose: Implementation of the class ListaSimple
  ***********************************************************************/
 #include <iostream>
@@ -388,4 +388,22 @@ void ListaCircularDoble::insertarPosicion(int obj, int pos)
             ingresoFinal(obj);
         }
     }
+}
+
+///Retorna 0 si no existe un numero en esa posicion
+
+int ListaCircularDoble::buscarPosicion(int posicion)
+{
+    int cont = 1;
+    Nodo *p = primero;
+    do{
+        if(cont == posicion){
+            return p->getDatos();
+        }else{
+             p = p->getSiguiente();
+        }
+        cont++;
+    }while(p != primero);
+
+    return 0;
 }
