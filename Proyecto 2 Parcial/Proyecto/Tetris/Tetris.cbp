@@ -37,7 +37,11 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="ListaCircularDoble.cpp" />
+		<Unit filename="ListaCircularDoble.h" />
 		<Unit filename="ManejoMemoria.h" />
+		<Unit filename="Nodo.cpp" />
+		<Unit filename="Nodo.h" />
 		<Unit filename="Piezas.cpp" />
 		<Unit filename="Piezas.h" />
 		<Unit filename="main.cpp" />
