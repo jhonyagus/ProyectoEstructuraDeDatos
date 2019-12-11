@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  ListaSimple.h
  * Author:  naula
- * Modified: miércoles, 13 de noviembre de 2019 10:47:31
+ * Modified: miÃ©rcoles, 13 de noviembre de 2019 10:47:31
  * Purpose: Declaration of the class ListaSimple
  ***********************************************************************/
 
@@ -21,6 +21,7 @@ public:
     void borrarIguales(bool *bandera);
     void borrarPosicion(int posicion);
     void insertarPosicion(int obj, int pos);
+    int buscarPosicion(int posicion);
    void ingresoInicio(int obj);
    void ingresoFinal(int obj);
    void imprimirDatos();
