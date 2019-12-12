@@ -140,7 +140,13 @@ bool validacionCaracter(char cadena[]){
 	}
 	return false;
 }
-
+void guardarNombre(string nombre)
+{
+    ofstream arch;
+    arch.open("Nombre.txt",ios::out);
+    arch<<nombre;
+    arch.close();
+}
 void numbers(int numero,int x,int y)
 {
 	switch(numero){

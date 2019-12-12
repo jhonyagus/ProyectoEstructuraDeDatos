@@ -1,9 +1,7 @@
 #include <iostream>
 #include "PersonalLibrary.h"
 #include "ingreso.h"
-
 using namespace std;
-
 int main()
 {
 	AltEnter();
@@ -11,13 +9,15 @@ int main()
     bool bandera = true;
     string nombre;
     Ingreso leer;
-
     do{
         int opcion = menu("Bienvenido",opciones,6);
             switch(opcion){
                 case 1:
                 	system("cls");
                 	nombre = leer.ingresarString("Ingrese nombre del jugador: ");
+                    guardarNombre(nombre);
+                	system("Tetris.exe");
+                	system("pause");
                     break;
                 case 2:
                     system("logo.bmp");
@@ -26,10 +26,8 @@ int main()
                     system("AyudaTetris.chm");
                     break;
                 case 4:
-					
-					break;    
+					break;
                 case 5:
-                	
                 	break;
                 case 6:
                     system("cls");
