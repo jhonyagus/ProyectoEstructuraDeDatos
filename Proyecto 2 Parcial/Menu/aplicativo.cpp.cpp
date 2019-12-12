@@ -7,7 +7,7 @@ using namespace std;
 void* moverMarquesina(void *marq){
 
 	int a, b, c, n=0,letra=39,pos=1,cont=39,aux,cont1=39,auxg;
-	char t[50] ="Gracias por usar nuestro programa",auxt[39]=" ";
+	char t[50] ="UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE",auxt[39]=" ";
 
 	do{
 		for (a=0;a<42;a++){
@@ -57,24 +57,30 @@ void* moverMarquesina(void *marq){
 		c=0;
 	}while (c=1);
 
+
 }
 
 
 int main()
 {
 	AltEnter();
-	pthread_t thread1;
-    pthread_t thread2;
+    cout<<endl;
+    cout<<endl;
     const char *opciones[]={"1) Jugar","2) Mostrar Imagen","3) Mostrar Ayuda","4) Codificar","5) Decodificar","6)Salir"};
     bool bandera = true;
-    string nombre;
+    string nombre,datos=lectura();
     Ingreso leer;
     do{
+        main:
         int opcion = menu("Bienvenido",opciones,6);
             switch(opcion){
                 case 1:
                 	system("cls");
+                	cout<<endl;
+                	cout<<endl;
                 	nombre = leer.ingresarString("Ingrese nombre del jugador: ");
+                	cout<<endl;
+                	cout<<endl;
                     guardarNombre(nombre);
                 	system("Tetris.exe");
                 	system("pause");
@@ -86,16 +92,29 @@ int main()
                     system("AyudaTetris.chm");
                     break;
                 case 4:
-					break;
+					system("cls");
+					cout<<endl;cout<<endl;cout<<endl;cout<<endl;cout<<endl;cout<<endl;
+					cout<<datos<<endl;
+                    codificar(datos,0);
+                    cout<<datos<<endl;
+                    system("pause");
+                    break;
                 case 5:
+                    system("cls");
+                    cout<<endl;cout<<endl;cout<<endl;cout<<endl;cout<<endl;cout<<endl;
+                    cout<<datos<<endl;
+                    decodificar(datos,0);
+                    cout<<datos<<endl;
+                    system("pause");
                 	break;
                 case 6:
                     system("cls");
-                    pthread_create(&thread1,NULL,moverMarquesina,NULL);
+                    //pthread_create(&thread1,NULL,moverMarquesina,NULL);
                     system("pause");
                     bandera = false;
                     break;
             }
+    system("cls");
     }while(bandera);
     return 0;
 }

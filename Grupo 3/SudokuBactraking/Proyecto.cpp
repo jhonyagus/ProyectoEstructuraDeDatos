@@ -130,5 +130,4 @@ void* moverMarquesina(void *marq){
 		cont=39;
 		c=0;
 	}while (c=1);
-
 }

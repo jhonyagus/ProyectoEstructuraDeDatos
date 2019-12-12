@@ -71,7 +71,6 @@ int menu(const char *titulo,const char *opciones[], int numero)
 				seleccionar--;
 				if(seleccionar==0)
 					seleccionar=numero;
-                system("cls");
 			}
 			break;
 			case TECLA_ABAJO:
@@ -79,7 +78,6 @@ int menu(const char *titulo,const char *opciones[], int numero)
 				seleccionar++;
 				if(seleccionar==numero+1)
 					seleccionar=1;
-                system("cls");
 			}
 			break;
 			case TECLA_ENTER:
@@ -303,5 +301,3 @@ void decodificar(string &nombre,int i)
         }while(i!=nombre.length());
 
 }
-
-
