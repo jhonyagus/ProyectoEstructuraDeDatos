@@ -117,11 +117,7 @@ int main()
             t=tecla();
         }
         lista.insertarPosicion(numPieza,x);
-        do
-        {
-            lista.borrarIguales(&bandera,puntos);
-        }
-        while(bandera);
+        lista.borrarIguales(puntos);
         encerar(tablero,15,30);
         llenarNuevaTabla(tablero,lista);
         system("cls");

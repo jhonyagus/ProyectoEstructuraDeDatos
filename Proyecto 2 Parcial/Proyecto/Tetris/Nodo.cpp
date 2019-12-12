@@ -59,18 +59,37 @@ void Nodo::setSiguiente(Nodo* newSiguiente)
    siguiente = newSiguiente;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       Nodo::setSiguiente(Nodo* newSiguiente)
+// Purpose:    Implementation of Nodo::setSiguiente()
+// Parameters:
+// - newSiguiente
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 Nodo::Nodo()
 {
     datos = NULL;
     siguiente = NULL;
     anterior = NULL;
 }
-
+////////////////////////////////////////////////////////////////////////
+// Name:       Nodo::setSiguiente(Nodo* newSiguiente)
+// Purpose:    Implementation of Nodo::setSiguiente()
+// Parameters:
+// - newSiguiente
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void Nodo::setAnterior(Nodo* newAnterior)
 {
    anterior = newAnterior;
 }
-
+////////////////////////////////////////////////////////////////////////
+// Name:       Nodo::setSiguiente(Nodo* newSiguiente)
+// Purpose:    Implementation of Nodo::setSiguiente()
+// Parameters:
+// - newSiguiente
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 Nodo * Nodo::getAnterior(void)
 {
    return anterior;

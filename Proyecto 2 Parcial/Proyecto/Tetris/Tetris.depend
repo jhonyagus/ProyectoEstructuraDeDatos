@@ -140,11 +140,11 @@
 	"Nodo.h"
 	"PersonalLibrary.h"
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
+1576145220 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
 	<iostream>
 	"Nodo.h"
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.h
+1576144119 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.h
 
 1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\personallibrary.h
 	<stdio.h>
@@ -160,7 +160,7 @@
 	<pthread.h>
 	<fstream>
 
-1576130350 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
+1576145193 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
 	"miniwin.h"
 	<iostream>
 	<stdlib.h>
@@ -171,19 +171,19 @@
 	"ListaCircularDoble.h"
 	"ManejoTablero.h"
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.h
+1576144119 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.h
 	<iostream>
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.h
+1576144119 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.h
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejomemoria.h
+1576144119 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejomemoria.h
 	<iostream>
 	<conio.h>
 	<time.h>
 	<stdio.h>
 	<fstream>
 
-1576130350 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejotablero.h
+1576144119 c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejotablero.h
 	"miniwin.h"
 	"Piezas.h"
 	<time.h>
@@ -191,7 +191,7 @@
 	<fstream>
 	<sstream>
 
-1576130350 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.cpp
+1576144119 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.cpp
 	<fstream>
 	<sstream>
 	<queue>
@@ -212,11 +212,11 @@
 	<X11/keysym.h>
 	"miniwin.h"
 
-1576130350 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.cpp
+1576144119 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.cpp
 	"Nodo.h"
 	<stdlib.h>
 
-1576130350 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.cpp
+1576144119 source:c:\users\jhony\documents\espe\tercer semestre\estructura de datos\segundoparcial\githubs\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.cpp
 	"Piezas.h"
 	"miniwin.h"
 

@@ -194,6 +194,15 @@ void ListaCircularDoble::imprimirDatos()
         Aux=Aux->getSiguiente();
 	}while(Aux!=primero);
 }
+
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 int ListaCircularDoble::tamLista()
 {
     int i=0;
@@ -214,11 +223,25 @@ int ListaCircularDoble::tamLista()
     return i;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 ListaCircularDoble::ListaCircularDoble(){
     primero = NULL;
 }
 
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void ListaCircularDoble::destruir(){
     Nodo *p = primero->getSiguiente();
     Nodo *actual;
@@ -230,14 +253,35 @@ void ListaCircularDoble::destruir(){
     delete primero;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void ListaCircularDoble::setPrimero(Nodo *newPrimero){
     primero = newPrimero;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 Nodo* ListaCircularDoble::getPrimero(){
    return primero;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 bool ListaCircularDoble::vacia()
 {
 	if (primero == NULL)
@@ -246,6 +290,13 @@ bool ListaCircularDoble::vacia()
 		return false;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 int ListaCircularDoble::cantidad()
 {
 	int cant = 0;
@@ -260,6 +311,13 @@ int ListaCircularDoble::cantidad()
 	return cant;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void ListaCircularDoble::borrarPosicion(int pos)
 {
     if (pos <= cantidad())
@@ -300,20 +358,23 @@ void ListaCircularDoble::borrarPosicion(int pos)
     }
 }
 
-
-void ListaCircularDoble::borrarIguales(bool *bandera ,int &puntos)
-{
-    Nodo *p = new Nodo();
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+void ListaCircularDoble::recursivo(Nodo *p, int posicion, bool bandera,int&puntos){
     p = primero;
-    int posicion = 1;
-
+    posicion = 1;
     do
     {
         if(cantidad() != 1)
         {
             if(primero == NULL)
             {
-                *bandera = false;
+                bandera = false;
                 break;
             }
             else
@@ -323,7 +384,7 @@ void ListaCircularDoble::borrarIguales(bool *bandera ,int &puntos)
                     borrarPosicion(posicion);
                     borrarPosicion(posicion);
                     puntos=puntos+25;
-                    *bandera = true;
+                    bandera = true;
                     break;
                 }
 
@@ -339,21 +400,50 @@ void ListaCircularDoble::borrarIguales(bool *bandera ,int &puntos)
                         borrarPosicion(posicion-1);
                     }
                     puntos=puntos+25;
-                    *bandera = true;
+                    bandera = true;
                     break;
                 }
-                *bandera = false;
+                bandera = false;
 
             }
-            *bandera = false;
+            bandera = false;
         }
-        *bandera = false;
+        bandera = false;
         posicion++;
         p = p->getSiguiente();
     }
     while(p != primero);
+    if(!bandera){
+        return;
+    }else{
+        recursivo(p,posicion,bandera,puntos);
+    }
+
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+void ListaCircularDoble::borrarIguales(int &puntos)
+{
+    Nodo *p = new Nodo();
+    p = primero;
+    int posicion = 1;
+    recursivo(p,posicion,false,puntos);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void ListaCircularDoble::insertarPosicion(int obj, int pos)
 {
 
@@ -383,8 +473,13 @@ void ListaCircularDoble::insertarPosicion(int obj, int pos)
     }
 }
 
-///Retorna 0 si no existe un numero en esa posicion
-
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaSimple::ingresoFinal(Persona obj)
+// Purpose:    Implementation of ListaSimple::ingresoFinal()
+// Parameters:
+// - obj
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 int ListaCircularDoble::buscarPosicion(int posicion)
 {
     int cont = 1;
