@@ -13,6 +13,7 @@
 #include <conio.h>
 #include<time.h>
 #include <stdio.h>
+#include<fstream>
 using namespace std;
 
 int **reservar(int fila,int colum)
@@ -70,5 +71,45 @@ void encerar(int ** m,int fila, int columna)
 void agregarPosicion(int**matriz,int x, int y,int valor)
 {
     *(*(matriz+y)+x)=valor;
+}
+void escribirArchivo(int **guardar,int x , int y)
+{
+    ofstream archivo;
+    archivo.open("MovimientoTetris.csv",ios::out | ios::app);
+    if(archivo.fail())
+    {
+        cout<<"No se pudo Abrir"<<endl;
+        exit(1);
+    }
+    else{
+        for(int i=0;i<x;i++)
+        {
+            for(int j=0;j<y;j++)
+            {
+                archivo<<*(*(guardar+i)+j)<<" \t";
+            }
+            archivo<<" \n";
+            archivo<<" \n";
+        }
+    }
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo<<" \n";
+    archivo.close();
+}
+void archivoJuego(string nombre,int nivel,int puntos)
+{
+    ofstream archivo;
+    archivo.open("Datos.txt",ios::out);
+    if(archivo.fail())
+    {
+        cout<<"No se pudo Abrir"<<endl;
+        exit(1);
+    }
+    else{
+                archivo<<nombre<<" "<<nivel<<" "<<" "<<puntos;
+    }
+    archivo.close();
 }
 #endif // MANEJOMEMORIA_H_INCLUDED

@@ -46,9 +46,11 @@
 		<Unit filename="PersonalLibrary.h" />
 		<Unit filename="Piezas.cpp" />
 		<Unit filename="Piezas.h" />
+		<Unit filename="TraformacionString.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="miniwin.cpp" />
 		<Unit filename="miniwin.h" />
+		<Unit filename="txt2pdf.exe" />
 		<Extensions>
 			<code_completion />
 			<envvars />

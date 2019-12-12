@@ -18,7 +18,7 @@ class ListaCircularDoble
 public:
     bool vacia();
     int cantidad();
-    void borrarIguales(bool *bandera);
+    void borrarIguales(bool *bandera,int&puntos);
     void borrarPosicion(int posicion);
     void insertarPosicion(int obj, int pos);
     int buscarPosicion(int posicion);

@@ -48,7 +48,7 @@
 	<time.h>
 	<stdio.h>
 
-1576040813 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
+1576112088 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\main.cpp
 	"miniwin.h"
 	<iostream>
 	<stdlib.h>
@@ -64,11 +64,12 @@
 
 1575933769 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\piezas.h
 
-1575737588 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejomemoria.h
+1576112053 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejomemoria.h
 	<iostream>
 	<conio.h>
 	<time.h>
 	<stdio.h>
+	<fstream>
 
 1575696291 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\miniwin.cpp
 	<fstream>
@@ -101,17 +102,23 @@
 
 1576013822 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\nodo.h
 
-1576040920 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
+1576110199 source:c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.cpp
 	<iostream>
 	"ListaCircularDoble.h"
 	"Nodo.h"
 	"PersonalLibrary.h"
 
-1576039094 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
+1576108642 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\listacirculardoble.h
 	<iostream>
 	"Nodo.h"
 
-1576040063 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejotablero.h
+1576109467 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\manejotablero.h
+	"miniwin.h"
+	"Piezas.h"
+	<time.h>
+	<string>
+	<fstream>
+	<sstream>
 
 1576023130 c:\users\rodrigo\desktop\githup\proyectoestructuradedatos\proyecto 2 parcial\proyecto\tetris\personallibrary.h
 	<stdio.h>

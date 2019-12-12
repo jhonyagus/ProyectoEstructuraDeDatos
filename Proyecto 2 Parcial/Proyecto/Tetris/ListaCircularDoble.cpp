@@ -75,26 +75,13 @@ void ListaCircularDoble::ingresoFinal(int obj)
 
 void ListaCircularDoble::imprimirDatos()
 {
-    /*if(!vacia()){
-        Nodo *p = primero;
-    do
-    {
-        cout << p->getDatos()<<" ";
-        p = p->getSiguiente();
-    }
-    while (p != primero);
-    cout << "\n";
-    }else{
-        cout<<"Lista vacia"<<endl;
-    }
-*/
     int x=8,y;
 	Nodo* Aux=new Nodo();
 	Aux=primero;
 
 
 	do{
-        y=10;
+        y=5;
 		switch(Aux->getDatos())
 		{
 			case 0:
@@ -310,7 +297,7 @@ void ListaCircularDoble::borrarPosicion(int pos)
 }
 
 
-void ListaCircularDoble::borrarIguales(bool *bandera)
+void ListaCircularDoble::borrarIguales(bool *bandera ,int &puntos)
 {
     Nodo *p = new Nodo();
     p = primero;
@@ -331,6 +318,7 @@ void ListaCircularDoble::borrarIguales(bool *bandera)
                 {
                     borrarPosicion(posicion);
                     borrarPosicion(posicion);
+                    puntos=puntos+25;
                     *bandera = true;
                     break;
                 }
@@ -346,6 +334,7 @@ void ListaCircularDoble::borrarIguales(bool *bandera)
                     {
                         borrarPosicion(posicion-1);
                     }
+                    puntos=puntos+25;
                     *bandera = true;
                     break;
                 }
