@@ -1,9 +1,13 @@
-/***********************************************************************
- * Module:  Nodo.h
- * Author:  User
- * Modified: miércoles, 13 de noviembre de 2019 19:39:18
- * Purpose: Declaration of the class Nodo
- ***********************************************************************/
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
 
 #if !defined(__Class_Diagram_1_Nodo_h)
 #define __Class_Diagram_1_Nodo_h

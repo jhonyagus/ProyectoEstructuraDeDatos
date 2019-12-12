@@ -1,9 +1,13 @@
-/***********************************************************************
- * Module:  Piezas.h
- * Author:  RODRIGO
- * Modified: viernes, 6 de diciembre de 2019 23:59:08
- * Purpose: Declaration of the class Piezas
- ***********************************************************************/
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
 
 #if !defined(__Class_Diagram_1_Piezas_h)
 #define __Class_Diagram_1_Piezas_h

@@ -1,9 +1,13 @@
-/***********************************************************************
- * Module:  ListaSimple.cpp
- * Author:  naula
- * Modified: miércoles, 13 de noviembre de 2019 10:47:31
- * Purpose: Implementation of the class ListaSimple
- ***********************************************************************/
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
 #include <iostream>
 #include "ListaCircularDoble.h"
 #include "Nodo.h"

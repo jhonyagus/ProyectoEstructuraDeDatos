@@ -1,3 +1,14 @@
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
+
 #ifndef MANEJOTABLERO_H_INCLUDED
 #define MANEJOTABLERO_H_INCLUDED
 #include "miniwin.h"

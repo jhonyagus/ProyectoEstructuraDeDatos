@@ -3,9 +3,10 @@
 *                        ESPE                                     *
 *TRABAJO EN GRUPO:                                                *
 *          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
 *MATERIA: ESTRUCTURA DE DATOS                                     *
 *NRC:2967                                                         *
-*Fecha de Creacion:16/10/2019                                     *
+*Fecha de Creacion:09/12/2019                                     *
 ******************************************************************/
 #ifndef MANEJOMEMORIA_H_INCLUDED
 #define MANEJOMEMORIA_H_INCLUDED

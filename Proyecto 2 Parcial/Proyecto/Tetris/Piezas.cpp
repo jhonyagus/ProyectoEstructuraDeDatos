@@ -1,9 +1,13 @@
-/***********************************************************************
- * Module:  Piezas.cpp
- * Author:  RODRIGO
- * Modified: viernes, 6 de diciembre de 2019 23:59:08
- * Purpose: Implementation of the class Piezas
- ***********************************************************************/
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
 
 #include "Piezas.h"
 #include "miniwin.h"

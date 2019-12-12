@@ -1,9 +1,13 @@
-/***********************************************************************
- * Module:  Nodo.cpp
- * Author:  User
- * Modified: miércoles, 13 de noviembre de 2019 19:39:18
- * Purpose: Implementation of the class Nodo
- ***********************************************************************/
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS                   *
+*                        ESPE                                     *
+*TRABAJO EN GRUPO:                                                *
+*          NOMBRES:ANTONI TOAPANTA                                *
+*                   JONNY NARANJO                                 *
+*MATERIA: ESTRUCTURA DE DATOS                                     *
+*NRC:2967                                                         *
+*Fecha de Creacion:09/12/2019                                     *
+******************************************************************/
 
 #include "Nodo.h"
 #include <stdlib.h>
