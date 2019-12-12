@@ -20,12 +20,12 @@
 using namespace miniwin;
 using namespace std;
 int main() {
+    vredimensiona(900, 800);
     srand(time(NULL));
     int numPieza,tic=0,t,**tablero,numPiezaS,puntos=0,nivel=1,tiempo=60;
     ListaCircularDoble lista;
     bool salir=true,bandera=true;
     Piezas p;
-   vredimensiona(900, 800);
    tablero=reservar(15,30);
    encerar(tablero,15,30);
     //Inicio de mi lista
@@ -128,11 +128,10 @@ int main() {
    system("txt2pdf.exe MovimientoTetris.csv Movimiento.pdf -oao -pfs60 -pps43 -ptc0 -width3000 -height2000");
    archivoJuego(lectura(),nivel,puntos);
    liberarMemoria(tablero,16);
-    refresca();
     mensaje("FIN DEL JUEGO :D\nESTE ES TU LISTA :3");
     vcierra();
     system("cls");
     lista.imprimirDatos();
-    system("pause");
+    refresca();
    return 0;
 }
