@@ -301,3 +301,32 @@ void decodificar(string &nombre,int i)
         }while(i!=nombre.length());
 
 }
+void archivoC(string nombre)
+{
+    ofstream archivo;
+    archivo.open("codificar.txt",ios::out);
+    if(archivo.fail())
+    {
+        cout<<"No se pudo Abrir"<<endl;
+        exit(1);
+    }
+    else{
+                archivo<<nombre;
+    }
+    archivo.close();
+}
+void archivoD(string nombre)
+{
+    ofstream archivo;
+    archivo.open("decodificar.txt",ios::out);
+    if(archivo.fail())
+    {
+        cout<<"No se pudo Abrir"<<endl;
+        exit(1);
+    }
+    else{
+                archivo<<nombre;
+    }
+    archivo.close();
+}
+

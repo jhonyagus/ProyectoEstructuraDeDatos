@@ -31,13 +31,13 @@ int main()
                 case 4:
                     system("cls");
                     codificar(datos,0);
-                    cout<<datos<<endl;
+                    archivoC(datos);
                     system("pause");
 					break;
                 case 5:
                     system("cls");
                     decodificar(datos,0);
-                    cout<<datos<<endl;
+                    archivoD(datos);
                     system("pause");
                 	break;
                 case 6:
