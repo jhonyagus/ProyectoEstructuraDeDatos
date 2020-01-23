@@ -1,0 +1,3 @@
+Hola;Hi;177
+Palabra;word;444
+Comer;Eat;282
