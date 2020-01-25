@@ -2,10 +2,10 @@
 #include<stdlib.h>
 #include<string>
 #include "Palabra.cpp"
-#include "Nodo.cpp"
-#include "OperacionLista.cpp"
+#include "OperacionArbol.cpp"
 #include "IngresoBloqueTeclas.h"
 #include "TraformacionString.h"
+#include "Arbol.cpp"
 #include<fstream>
 using namespace std;
 void write_file(Palabra p)
@@ -23,10 +23,10 @@ void write_file(Palabra p)
 
     archivo.close();
 }
-void open_file(Nodo *&lista)
+void open_file(Arbol *&arbol)
 {
     ifstream archivo;
-    OperacionLista op;
+    OperacionArbol opA;
     string espanol,ingles,clave;
     archivo.open("Dic.txt",ios::in);
 
@@ -44,7 +44,7 @@ void open_file(Nodo *&lista)
             p.setEspanol(espanol);
             p.setIngles(ingles);
             p.setClave(stringAint(clave));
-            op.addInicial(lista,p);
+            opA.insertar(arbol,p);
         }
     }
     archivo.close();
@@ -56,7 +56,25 @@ int clave(string palabra)
     {
         j=palabra.at(i)+j;
     }
+    if(j>=100 || j<300)
+    {
+        j=j-100;
+    }
+    else if(j>=300|| j<650)
+    {
+        j=j-200;
+    }
+    else{
+        j=j+500;
+    }
     return j;
+}
+void convertirMayusculas(string &palabra)
+{
+    for(int i=0;i<palabra.length();i++)
+    {
+        palabra.at(i)=toupper(palabra.at(i));
+    }
 }
 void agregar_Diccionario()
 {
@@ -68,6 +86,8 @@ void agregar_Diccionario()
     cout<<"Ingles"<<endl;
     b=ig.ingresarLetras(&c);
     Palabra p;
+    convertirMayusculas(a);
+    convertirMayusculas(b);
     p.setEspanol(a);
     p.setIngles(b);
     p.setClave(clave(b));
@@ -75,12 +95,16 @@ void agregar_Diccionario()
 }
 int main()
 {
-    //agregar_Diccionario();
-    Nodo *lista=NULL;
-    OperacionLista op;
-    open_file(lista);
-    op.print(lista);
-    delete lista;
+    /*bool flag=true; con esta agregamos mas palabras al diccionario
+    while(flag)
+    {
+        agregar_Diccionario();
+    }*/
+    Arbol *arbol=NULL;
+    OperacionArbol opA;
+    open_file(arbol);
+    opA.mostrar(arbol,0);
+    delete arbol;
     system("pause");
     return 0;
 }
