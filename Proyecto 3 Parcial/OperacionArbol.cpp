@@ -46,7 +46,7 @@ void OperacionArbol::insertar(Arbol *&arbol, Palabra palabra)
 // Name:       OperacionArbol::mostrar()
 // Purpose:    Implementation of OperacionArbol::mostrar()
 // Return:     void
-////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////creo que e/////////////////////////////
 void space(int tam)
 {
     for(int i=0;i<tam;i++)
@@ -64,7 +64,8 @@ void OperacionArbol::mostrar(Arbol *arbol,int cont)
     {
         mostrar(arbol->getDer(),cont+1);
         space(cont);
-        cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
+        //cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
+        cout<<arbol->getPalabra().getClave()<<endl;
         mostrar(arbol->getIzq(),cont+1);
     }
 }
@@ -78,4 +79,42 @@ void OperacionArbol::mostrar(Arbol *arbol,int cont)
 void OperacionArbol::eliminar(Arbol *&arbol,Palabra palabra)
 {
    // TODO : implement
+}
+
+void OperacionArbol::busqueda(Arbol *arbol, Palabra pBuscar)
+{
+    if(arbol == NULL)
+    {
+       cout<< " No registrado en el diccionario "<<endl;
+    }
+    else
+    {
+        if(arbol->getPalabra().getClave() == pBuscar.getClave())
+        {
+            cout<<pBuscar.getIngles()<<" - "<<arbol->getPalabra().getEspanol()<<endl;
+            return;
+        }
+        else
+        {
+            if( pBuscar.getClave() < arbol->getPalabra().getClave())
+            {
+                busqueda(arbol->getIzq(),pBuscar);
+            }
+            else
+            {
+                busqueda(arbol->getDer(),pBuscar);
+            }
+        }
+    }
+}
+
+void OperacionArbol::inorden(Arbol *arbol) {
+	if (arbol == NULL) {
+		return;
+	}
+	else {
+		inorden(arbol->getIzq());
+		cout << arbol->getPalabra().getClave() << " ";
+		inorden(arbol->getDer());
+	}
 }

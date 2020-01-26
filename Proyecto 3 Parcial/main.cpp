@@ -40,7 +40,7 @@ void open_file(Arbol *&arbol)
             Palabra p;
             getline(archivo,espanol,';');
             getline(archivo,ingles,';');
-            getline(archivo,clave,'\n');
+            getline(archivo,clave,':');
             p.setEspanol(espanol);
             p.setIngles(ingles);
             p.setClave(stringAint(clave));
@@ -101,9 +101,34 @@ int main()
         agregar_Diccionario();
     }*/
     Arbol *arbol=NULL;
+    int opc;
+    Palabra palabra;
+    char c,d;
+    string plbra;
+    Ingreso leer;
     OperacionArbol opA;
     open_file(arbol);
     opA.mostrar(arbol,0);
+    do{
+        open_file(arbol);
+        cout<<"1. Traducir Ingles-Espaniol"<<endl;
+        cout<<"2. Salir"<<endl;
+        cout<<"Ingrese opcion: ";
+        opc = leer.ingresarInt(&c);
+
+        switch(opc){
+            case 1:
+                cout<<"Ingrese una palabra en ingles para traducir: ";
+                plbra = leer.ingresarLetras(&d);
+                convertirMayusculas(plbra);
+                palabra.setIngles(plbra);
+                palabra.setClave(clave(plbra));
+                cout<<palabra.getClave();
+                opA.busqueda(arbol, palabra);
+                break;
+        }
+
+    }while(opc!=2);
     delete arbol;
     system("pause");
     return 0;
