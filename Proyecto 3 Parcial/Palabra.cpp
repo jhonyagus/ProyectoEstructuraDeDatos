@@ -79,10 +79,26 @@ void Palabra::setClave(int newClave)
    this->clave = newClave;
 }
 
+void Palabra::setClaveE(int newClave)
+{
+   this->claveE = newClave;
+}
 ////////////////////////////////////////////////////////////////////////
 // Name:       Palabra::Palabra()
 // Purpose:    Implementation of Palabra::Palabra()
 // Return:
+////////////////////////////////////////////////////////////////////////
+int Palabra::getClaveE(void)
+{
+   return this->claveE;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Palabra::setClave(int newClave)
+// Purpose:    Implementation of Palabra::setClave()
+// Parameters:
+// - newClave
+// Return:     void
 ////////////////////////////////////////////////////////////////////////
 
 Palabra::Palabra()

@@ -18,6 +18,8 @@ public:
    void setIngles(string newIngles);
    int getClave(void);
    void setClave(int newClave);
+   int getClaveE(void);
+   void setClaveE(int newClave);
    Palabra();
    ~Palabra();
 
@@ -26,6 +28,7 @@ private:
    string espanol;
    string ingles;
    int clave;
+   int claveE;
 };
 
 #endif

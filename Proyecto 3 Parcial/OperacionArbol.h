@@ -14,9 +14,11 @@ class OperacionArbol
 public:
    //Arbol *crearNodo(Palabra palabra)
    void insertar(Arbol *&arbol, Palabra palabra);
+   void insertarE(Arbol *&arbol, Palabra palabra);
    void mostrar(Arbol *arbol,int cont);
    void eliminar(Arbol *&arbol,Palabra palabra);
-   void busqueda(Arbol *arbol, int n,string plbra);
+   void busqueda(Arbol *arbol, int n,string plbra,string &result);
+   void busquedaEspanol(Arbol *arbol, int n,string plbra,string &result);
    void inorden(Arbol *arbol);
    //void space(int tam);
 protected:

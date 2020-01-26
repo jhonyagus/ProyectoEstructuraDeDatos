@@ -41,6 +41,22 @@ void OperacionArbol::insertar(Arbol *&arbol, Palabra palabra)
                 }
             }
 }
+void OperacionArbol::insertarE(Arbol *&arbol, Palabra palabra)
+{
+   if(arbol==NULL){
+                Arbol *nuevo_nodo=crearNodo(palabra);
+                arbol=nuevo_nodo;
+            }
+            else{
+                int valorR = arbol->getPalabra().getClaveE();
+                if(palabra.getClaveE()<valorR){
+                    insertar(arbol->izq,palabra);
+                }
+                else{
+                    insertar(arbol->der,palabra);
+                }
+            }
+}
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       OperacionArbol::mostrar()
@@ -64,8 +80,8 @@ void OperacionArbol::mostrar(Arbol *arbol,int cont)
     {
         mostrar(arbol->getDer(),cont+1);
         space(cont);
-        //cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
-        cout<<arbol->getPalabra().getClave()<<endl;
+        cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
+        //cout<<arbol->getPalabra().getClave()<<endl;
         mostrar(arbol->getIzq(),cont+1);
     }
 }
@@ -81,7 +97,7 @@ void OperacionArbol::eliminar(Arbol *&arbol,Palabra palabra)
    // TODO : implement
 }
 
-void OperacionArbol::busqueda(Arbol *arbol, int n, string plbra)
+void OperacionArbol::busqueda(Arbol *arbol, int n, string plbra,string &result)
 {
     if(arbol == NULL)
     {
@@ -92,21 +108,49 @@ void OperacionArbol::busqueda(Arbol *arbol, int n, string plbra)
         if(arbol->getPalabra().getClave() == n)
         {
             cout<<plbra<<" - "<<arbol->getPalabra().getEspanol()<<endl;
+            result=arbol->getPalabra().getEspanol();
             return;
         }
         else
         {
             if( n < arbol->getPalabra().getClave())
             {
-                busqueda(arbol->getIzq(),n,plbra);
+                busqueda(arbol->getIzq(),n,plbra,result);
             }
             else
             {
-                busqueda(arbol->getDer(),n,plbra);
+                busqueda(arbol->getDer(),n,plbra,result);
             }
         }
     }
 }
+void OperacionArbol::busquedaEspanol(Arbol *arbol, int n, string plbra,string &result)
+{
+    if(arbol == NULL)
+    {
+       cout<< " No registrado en el diccionario "<<endl;
+    }
+    else
+
+         //cout<<arbol->getPalabra().getClaveE()<<" "<<n<<endl;
+        if(arbol->getPalabra().getClaveE() == n)
+        {
+            cout<<plbra<<" - "<<arbol->getPalabra().getIngles()<<endl;
+            result=arbol->getPalabra().getIngles();
+            return;
+        }
+        else
+        {
+            if( n < arbol->getPalabra().getClaveE())
+            {
+                busquedaEspanol(arbol->izq,n,plbra,result);
+            }
+            else
+            {
+                busquedaEspanol(arbol->der,n,plbra,result);
+            }
+        }
+    }
 
 void OperacionArbol::inorden(Arbol *arbol) {
 	if (arbol == NULL) {

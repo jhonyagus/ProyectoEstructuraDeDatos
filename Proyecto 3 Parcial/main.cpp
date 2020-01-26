@@ -18,7 +18,7 @@ void write_file(Palabra p)
         exit(1);
     }
     else{
-        archivo<<p.getEspanol()<<";"<<p.getIngles()<<";"<<p.getClave()<<endl;
+        archivo<<p.getEspanol()<<";"<<p.getIngles()<<";"<<p.getClave()<<";"<<p.getClaveE()<<endl;
     }
 
     archivo.close();
@@ -27,7 +27,7 @@ void open_file(Arbol *&arbol)
 {
     ifstream archivo;
     OperacionArbol opA;
-    string espanol,ingles,clave;
+    string espanol,ingles,clave,claveE;
     archivo.open("Dic.txt",ios::in);
 
     if (archivo.fail())
@@ -40,11 +40,41 @@ void open_file(Arbol *&arbol)
             Palabra p;
             getline(archivo,espanol,';');
             getline(archivo,ingles,';');
-            getline(archivo,clave,':');
+            getline(archivo,clave,';');
+            getline(archivo,claveE,'\n');
             p.setEspanol(espanol);
             p.setIngles(ingles);
             p.setClave(stringAint(clave));
+            p.setClaveE(stringAint(claveE));
             opA.insertar(arbol,p);
+        }
+    }
+    archivo.close();
+}
+void open_file_espanol(Arbol *&arbol)
+{
+    ifstream archivo;
+    OperacionArbol opA;
+    string espanol,ingles,clave,claveE;
+    archivo.open("Dic.txt",ios::in);
+
+    if (archivo.fail())
+    {
+        cout<<"No se puedo acceder al archivo"<<endl;
+    }
+    else
+    {
+        while(!archivo.eof()){
+            Palabra p;
+            getline(archivo,espanol,';');
+            getline(archivo,ingles,';');
+            getline(archivo,clave,';');
+            getline(archivo,claveE,'\n');
+            p.setEspanol(espanol);
+            p.setIngles(ingles);
+            p.setClave(stringAint(clave));
+            p.setClaveE(stringAint(claveE));
+            opA.insertarE(arbol,p);
         }
     }
     archivo.close();
@@ -91,28 +121,36 @@ void agregar_Diccionario()
     p.setEspanol(a);
     p.setIngles(b);
     p.setClave(clave(b));
+    p.setClaveE(clave(a));
     write_file(p);
 }
 int main()
 {
-    /*bool flag=true; con esta agregamos mas palabras al diccionario
+    /*bool flag=true; //con esta agregamos mas palabras al diccionario
     while(flag)
     {
         agregar_Diccionario();
     }*/
     Arbol *arbol=NULL;
+    Arbol *arbolE=NULL;
     int opc;
     Palabra palabra;
     char c,d;
-    string plbra;
+    string plbra,result;
     Ingreso leer;
     OperacionArbol opA;
     open_file(arbol);
+    open_file_espanol(arbolE);
     opA.mostrar(arbol,0);
+    cout<<endl;
+    cout<<endl;
+    opA.mostrar(arbolE,0);
+    cout<<endl;
     do{
         open_file(arbol);
         cout<<"1. Traducir Ingles-Espaniol"<<endl;
-        cout<<"2. Salir"<<endl;
+        cout<<"2.Traducir Español-Ingles"<<endl;
+        cout<<"3. Salir"<<endl;
         cout<<"Ingrese opcion: ";
         opc = leer.ingresarInt(&c);
 
@@ -121,14 +159,21 @@ int main()
                 cout<<"Ingrese una palabra en ingles para traducir: ";
                 plbra = leer.ingresarLetras(&d);
                 convertirMayusculas(plbra);
-                palabra.setIngles(plbra);
                 palabra.setClave(clave(plbra));
-                opA.busqueda(arbol, palabra.getClave(),plbra);
+                opA.busqueda(arbol, palabra.getClave(),plbra,result);
+                cout<<result<<endl;
                 break;
+            case 2:
+                cout<<"Ingrese una palabra en Español para traducir: ";
+                plbra = leer.ingresarLetras(&d);
+                convertirMayusculas(plbra);
+                palabra.setClaveE(clave(plbra));
+                opA.busquedaEspanol(arbolE, palabra.getClaveE(),plbra,result);
+                cout<<result<<endl;
         }
 
-    }while(opc!=2);
-    delete arbol;
+    }while(opc!=3);
+    delete arbol,arbolE;
     system("pause");
     return 0;
 }
