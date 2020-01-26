@@ -81,7 +81,7 @@ void OperacionArbol::eliminar(Arbol *&arbol,Palabra palabra)
    // TODO : implement
 }
 
-void OperacionArbol::busqueda(Arbol *arbol, Palabra pBuscar)
+void OperacionArbol::busqueda(Arbol *arbol, int n, string plbra)
 {
     if(arbol == NULL)
     {
@@ -89,20 +89,20 @@ void OperacionArbol::busqueda(Arbol *arbol, Palabra pBuscar)
     }
     else
     {
-        if(arbol->getPalabra().getClave() == pBuscar.getClave())
+        if(arbol->getPalabra().getClave() == n)
         {
-            cout<<pBuscar.getIngles()<<" - "<<arbol->getPalabra().getEspanol()<<endl;
+            cout<<plbra<<" - "<<arbol->getPalabra().getEspanol()<<endl;
             return;
         }
         else
         {
-            if( pBuscar.getClave() < arbol->getPalabra().getClave())
+            if( n < arbol->getPalabra().getClave())
             {
-                busqueda(arbol->getIzq(),pBuscar);
+                busqueda(arbol->getIzq(),n,plbra);
             }
             else
             {
-                busqueda(arbol->getDer(),pBuscar);
+                busqueda(arbol->getDer(),n,plbra);
             }
         }
     }

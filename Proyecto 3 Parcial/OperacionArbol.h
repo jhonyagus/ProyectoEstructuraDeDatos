@@ -16,7 +16,7 @@ public:
    void insertar(Arbol *&arbol, Palabra palabra);
    void mostrar(Arbol *arbol,int cont);
    void eliminar(Arbol *&arbol,Palabra palabra);
-   void busqueda(Arbol *arbol, Palabra pBuscar);
+   void busqueda(Arbol *arbol, int n,string plbra);
    void inorden(Arbol *arbol);
    //void space(int tam);
 protected:

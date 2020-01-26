@@ -123,8 +123,7 @@ int main()
                 convertirMayusculas(plbra);
                 palabra.setIngles(plbra);
                 palabra.setClave(clave(plbra));
-                cout<<palabra.getClave();
-                opA.busqueda(arbol, palabra);
+                opA.busqueda(arbol, palabra.getClave(),plbra);
                 break;
         }
 
