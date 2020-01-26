@@ -44,16 +44,17 @@ void OperacionArbol::insertar(Arbol *&arbol, Palabra palabra)
 void OperacionArbol::insertarE(Arbol *&arbol, Palabra palabra)
 {
    if(arbol==NULL){
+
                 Arbol *nuevo_nodo=crearNodo(palabra);
-                arbol=nuevo_nodo;
+                arbol = nuevo_nodo;
             }
             else{
                 int valorR = arbol->getPalabra().getClaveE();
-                if(palabra.getClaveE()<valorR){
-                    insertar(arbol->izq,palabra);
+                if(palabra.getClaveE() < valorR){
+                    insertarE(arbol->izq,palabra);
                 }
                 else{
-                    insertar(arbol->der,palabra);
+                    insertarE(arbol->der,palabra);
                 }
             }
 }
@@ -80,8 +81,8 @@ void OperacionArbol::mostrar(Arbol *arbol,int cont)
     {
         mostrar(arbol->getDer(),cont+1);
         space(cont);
-        cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
-        //cout<<arbol->getPalabra().getClave()<<endl;
+       // cout<<arbol->getPalabra().getEspanol()<<" "<<arbol->getPalabra().getIngles()<<endl;
+        cout<<arbol->getPalabra().getClaveE()<<endl;
         mostrar(arbol->getIzq(),cont+1);
     }
 }
@@ -131,8 +132,7 @@ void OperacionArbol::busquedaEspanol(Arbol *arbol, int n, string plbra,string &r
        cout<< " No registrado en el diccionario "<<endl;
     }
     else
-
-         //cout<<arbol->getPalabra().getClaveE()<<" "<<n<<endl;
+    {
         if(arbol->getPalabra().getClaveE() == n)
         {
             cout<<plbra<<" - "<<arbol->getPalabra().getIngles()<<endl;
@@ -151,6 +151,7 @@ void OperacionArbol::busquedaEspanol(Arbol *arbol, int n, string plbra,string &r
             }
         }
     }
+}
 
 void OperacionArbol::inorden(Arbol *arbol) {
 	if (arbol == NULL) {

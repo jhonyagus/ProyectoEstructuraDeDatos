@@ -124,13 +124,9 @@ void agregar_Diccionario()
     p.setClaveE(clave(a));
     write_file(p);
 }
+
 int main()
 {
-    /*bool flag=true; //con esta agregamos mas palabras al diccionario
-    while(flag)
-    {
-        agregar_Diccionario();
-    }*/
     Arbol *arbol=NULL;
     Arbol *arbolE=NULL;
     int opc;
@@ -148,9 +144,11 @@ int main()
     cout<<endl;
     do{
         open_file(arbol);
+        open_file_espanol(arbolE);
         cout<<"1. Traducir Ingles-Espaniol"<<endl;
-        cout<<"2.Traducir Español-Ingles"<<endl;
-        cout<<"3. Salir"<<endl;
+        cout<<"2. Traducir Español-Ingles"<<endl;
+        cout<<"3. Ingresar palabra al diccionario"<<endl;
+        cout<<"4. Salir"<<endl;
         cout<<"Ingrese opcion: ";
         opc = leer.ingresarInt(&c);
 
@@ -161,7 +159,7 @@ int main()
                 convertirMayusculas(plbra);
                 palabra.setClave(clave(plbra));
                 opA.busqueda(arbol, palabra.getClave(),plbra,result);
-                cout<<result<<endl;
+                //cout<<result<<endl;
                 break;
             case 2:
                 cout<<"Ingrese una palabra en Español para traducir: ";
@@ -169,10 +167,14 @@ int main()
                 convertirMayusculas(plbra);
                 palabra.setClaveE(clave(plbra));
                 opA.busquedaEspanol(arbolE, palabra.getClaveE(),plbra,result);
-                cout<<result<<endl;
+                //cout<<result<<endl;
+                break;
+            case 3:
+                agregar_Diccionario();
+                break;
         }
 
-    }while(opc!=3);
+    }while(opc!=4);
     delete arbol,arbolE;
     system("pause");
     return 0;
