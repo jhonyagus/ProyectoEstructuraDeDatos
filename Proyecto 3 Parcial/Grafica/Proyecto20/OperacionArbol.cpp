@@ -4,7 +4,7 @@
  * Modified: sábado, 25 de enero de 2020 13:49:51
  * Purpose: Implementation of the class OperacionArbol
  ***********************************************************************/
-
+#pragma once
 #include "OperacionArbol.h"
 #include <iostream>
 #include "Palabra.h"

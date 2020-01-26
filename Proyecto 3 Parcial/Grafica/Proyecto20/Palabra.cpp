@@ -4,8 +4,9 @@
  * Modified: martes, 21 de enero de 2020 00:11:09
  * Purpose: Implementation of the class Palabra
  ***********************************************************************/
-
+#pragma once
 #include "Palabra.h"
+
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Palabra::getEspanol()

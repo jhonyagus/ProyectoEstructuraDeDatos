@@ -17,9 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Arbol.cpp \
+    IngresoBloqueTeclas.cpp \
+    ManejoArchivos.cpp \
     OperacionArbol.cpp \
     Palabra.cpp \
+    TransformacionString.cpp \
     agregar.cpp \
+    correcto.cpp \
     main.cpp \
     mainwindow.cpp \
     tie.cpp \
@@ -28,17 +32,19 @@ SOURCES += \
 HEADERS += \
     Arbol.h \
     IngresoBloqueTeclas.h \
-    ManejoArchivo.h \
+    ManejoArchivos.h \
     OperacionArbol.h \
     Palabra.h \
-    TraformacionString.h \
+    TransformacionString.h \
     agregar.h \
+    correcto.h \
     mainwindow.h \
     tie.h \
     tsi.h
 
 FORMS += \
     agregar.ui \
+    correcto.ui \
     mainwindow.ui \
     tie.ui \
     tsi.ui

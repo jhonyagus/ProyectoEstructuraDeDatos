@@ -24,7 +24,7 @@ void TIE::on_pushButton_clicked()
     string result;
     QString palabra = ui->txting->text();
     open_file(arbol);
-    string var=palabra.toLocal8Bit().constData();
+    string var=palabra.toStdString();
     convertirMayusculas(var);
     palabraT.setClave(clave(var));
     opA.busqueda(arbol, palabraT.getClave(),var,result);

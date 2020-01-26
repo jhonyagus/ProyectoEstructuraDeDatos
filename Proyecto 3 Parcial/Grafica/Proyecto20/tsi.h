@@ -1,3 +1,4 @@
+#pragma once
 #ifndef TSI_H
 #define TSI_H
 #include <QDialog>

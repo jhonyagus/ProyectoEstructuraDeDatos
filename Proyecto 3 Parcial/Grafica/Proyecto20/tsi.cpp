@@ -2,8 +2,11 @@
 #include "ui_tsi.h"
 #include <iostream>
 #include <string>
-//#include <ManejoArchivo.h>
-#include <iostream>
+#include "ManejoArchivos.h"
+#include "OperacionArbol.h"
+
+
+using namespace std;
 Tsi::Tsi(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Tsi)
@@ -18,16 +21,16 @@ Tsi::~Tsi()
 
 void Tsi::on_pushButton_clicked()
 {
-/*
-    Arbol *arbolE=NULL;
+    ManejoArchivo controlador;
+    Arbol *arbolE = NULL;
     Palabra palabraT;
-    open_file_espanol(arbolE);
-    OperacionArbol opA;
+    controlador.open_file_espanol(arbolE);
+    OperacionArbol opAr;
     string result;
     QString palabra=ui->txtes->text();
-    string vari = palabra.toLocal8Bit().constData();
-    convertirMayusculas(vari);
-    palabraT.setClaveE(clave(vari));
-    opA.busquedaEspanol(arbolE, palabraT.getClaveE(),vari,result);
-    ui->txting->setText(QString::fromStdString(result));*/
+    string vari = palabra.toStdString();
+    controlador.convertirMayusculas(vari);
+    palabraT.setClaveE(controlador.clave(vari));
+    opAr.busquedaEspanol(arbolE, palabraT.getClaveE(),vari,result);
+    ui->txting->setText(QString::fromStdString(result));
 }

@@ -1,12 +1,17 @@
 Arbol.o
+IngresoBloqueTeclas.o
+ManejoArchivos.o
 OperacionArbol.o
 Palabra.o
+TransformacionString.o
 agregar.o
+correcto.o
 main.o
 mainwindow.o
 tie.o
 tsi.o
 moc_agregar.o
+moc_correcto.o
 moc_mainwindow.o
 moc_tie.o
 moc_tsi.o

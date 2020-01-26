@@ -4,7 +4,7 @@
  * Modified: sábado, 25 de enero de 2020 13:49:51
  * Purpose: Declaration of the class OperacionArbol
  ***********************************************************************/
-
+#pragma once
 #if !defined(__Arbol_OperacionArbol_h)
 #define __Arbol_OperacionArbol_h
 

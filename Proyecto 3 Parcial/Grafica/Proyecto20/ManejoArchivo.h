@@ -3,13 +3,15 @@
 #include<iostream>
 #include<stdlib.h>
 #include<string>
-#include "Palabra.cpp"
-#include "OperacionArbol.cpp"
+#include "Palabra.h"
+#include "OperacionArbol.h"
 #include "IngresoBloqueTeclas.h"
-#include "TraformacionString.h"
-#include "Arbol.cpp"
+#include "TransformacionString.h"
+#include "Arbol.h"
 #include<fstream>
 using namespace std;
+
+
 void write_file(Palabra p)
 {
     ofstream archivo;
@@ -28,6 +30,7 @@ void write_file(Palabra p)
 void open_file(Arbol *&arbol)
 {
     ifstream archivo;
+    Transformacion transformacion;
     OperacionArbol opA;
     string espanol,ingles,clave,claveE;
     archivo.open("Dic.txt",ios::in);
@@ -46,8 +49,9 @@ void open_file(Arbol *&arbol)
             getline(archivo,claveE,'\n');
             p.setEspanol(espanol);
             p.setIngles(ingles);
-            p.setClave(stringAint(clave));
-            p.setClaveE(stringAint(claveE));
+
+            p.setClave(transformacion.stringAint(clave));
+            p.setClaveE(transformacion.stringAint(claveE));
             opA.insertar(arbol,p);
         }
     }
@@ -55,6 +59,7 @@ void open_file(Arbol *&arbol)
 }
 void open_file_espanol(Arbol *&arbol)
 {
+    Transformacion transformacion;
     ifstream archivo;
     OperacionArbol opA;
     string espanol,ingles,clave,claveE;
@@ -74,8 +79,8 @@ void open_file_espanol(Arbol *&arbol)
             getline(archivo,claveE,'\n');
             p.setEspanol(espanol);
             p.setIngles(ingles);
-            p.setClave(stringAint(clave));
-            p.setClaveE(stringAint(claveE));
+            p.setClave(transformacion.stringAint(clave));
+            p.setClaveE(transformacion.stringAint(claveE));
             opA.insertarE(arbol,p);
         }
     }
@@ -113,7 +118,7 @@ void agregar_Diccionario()
     char c;
     string a,b;
     Ingreso ig;
-    cout<<"Español"<<endl;
+    cout<<"Espanol"<<endl;
     a=ig.ingresarLetras(&c);
     cout<<"Ingles"<<endl;
     b=ig.ingresarLetras(&c);

@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     Tsi *ventana = new Tsi;
+
     ventana->show();
 
 }
@@ -23,12 +24,14 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     TIE *ventana = new TIE;
+
     ventana->show();
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
     Agregar *ventana = new Agregar;
+    this->hide();
     ventana->show();
 
 }

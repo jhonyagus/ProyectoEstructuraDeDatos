@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -22,24 +21,19 @@ QT_BEGIN_NAMESPACE
 class Ui_Agregar
 {
 public:
-    QDialogButtonBox *buttonBox;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *Agregar)
     {
         if (Agregar->objectName().isEmpty())
             Agregar->setObjectName(QString::fromUtf8("Agregar"));
         Agregar->resize(376, 300);
-        buttonBox = new QDialogButtonBox(Agregar);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(30, 240, 341, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         label = new QLabel(Agregar);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(40, 40, 311, 41));
@@ -69,11 +63,12 @@ public:
         lineEdit_2->setGeometry(QRect(120, 190, 113, 20));
         pushButton = new QPushButton(Agregar);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(260, 150, 75, 23));
+        pushButton->setGeometry(QRect(270, 120, 75, 23));
+        pushButton_2 = new QPushButton(Agregar);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(270, 160, 75, 23));
 
         retranslateUi(Agregar);
-        QObject::connect(buttonBox, SIGNAL(accepted()), Agregar, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), Agregar, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(Agregar);
     } // setupUi
@@ -85,6 +80,7 @@ public:
         label_2->setText(QCoreApplication::translate("Agregar", "Espa\303\261ol", nullptr));
         label_3->setText(QCoreApplication::translate("Agregar", "Ingles", nullptr));
         pushButton->setText(QCoreApplication::translate("Agregar", "Agregar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Agregar", "Men\303\272", nullptr));
     } // retranslateUi
 
 };

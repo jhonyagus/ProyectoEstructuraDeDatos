@@ -4,7 +4,7 @@
  * Modified: sábado, 25 de enero de 2020 13:50:37
  * Purpose: Implementation of the class Arbol
  ***********************************************************************/
-
+#pragma once
 #include "Arbol.h"
 
 ////////////////////////////////////////////////////////////////////////

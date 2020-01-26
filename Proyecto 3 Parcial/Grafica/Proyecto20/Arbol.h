@@ -4,7 +4,7 @@
  * Modified: sábado, 25 de enero de 2020 13:50:37
  * Purpose: Declaration of the class Arbol
  ***********************************************************************/
-
+#pragma once
 #if !defined(__Arbol_Arbol_h)
 #define __Arbol_Arbol_h
 #include "Palabra.h"
