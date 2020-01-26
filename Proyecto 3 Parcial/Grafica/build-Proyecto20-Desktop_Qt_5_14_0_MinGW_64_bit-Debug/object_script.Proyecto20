@@ -1,0 +1,12 @@
+Arbol.o
+OperacionArbol.o
+Palabra.o
+agregar.o
+main.o
+mainwindow.o
+tie.o
+tsi.o
+moc_agregar.o
+moc_mainwindow.o
+moc_tie.o
+moc_tsi.o
